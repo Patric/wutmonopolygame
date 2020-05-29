@@ -2,7 +2,7 @@
 
 ETAP 2
 ----------------------------------------------------------------------------------------------
-Etap 2 projektu PJC to gałąź PJC-projekt-prototyp-aplikacji
+
 
 Aby uruchomić program bez otwierania projektu w Visual Studio należy pobrać spakowany plik executable.zip i wypakować go. W środku znajduje się plik wykonawczy .exe oraz katalogi z zasobami. Program nie potrzebuje dodatkowych bibliotek. (a przynajmniej u mnie nie potrzebował).
 
