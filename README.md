@@ -7,8 +7,7 @@ Etap 2 projektu PJC to gałąź PJC-projekt-prototyp-aplikacji
 Aby projekt uruchomić w Visual studio należy plik .zip wypakować do katalogu o 1 wyżej niż plik main.cpp.
 Dopiero zaczynam z git'em, więc przepraszam z góry za wszelkie niejasności i nieporządek w komentarzach.
 
-Jeśli chodzi o diagram klas to w dużej mierze zmieniłem go w porównaniu do etapu 1, gdyż dopiero na etapie implementacji f
-aktycznie zrozumiałem obiektowość i przeszukałem internet w celu opracowania skutecznej mechaniki do gry. Jestem świadomy, 
+Jeśli chodzi o diagram klas to w dużej mierze zmieniłem go w porównaniu do etapu 1, gdyż dopiero na etapie implementacji faktycznie zrozumiałem obiektowość i przeszukałem internet w celu opracowania skutecznej mechaniki do gry. Jestem świadomy, 
 że opracowana przeze mnie mechanikajest nieco zbyt skomplikowana jak na taką grę, ale znalazłem świetny poradnik do gier RPG i 
 również dzięki niemu zrozumiałem projektowanie obiektowe.
 
