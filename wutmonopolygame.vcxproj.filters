@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="states">
+      <UniqueIdentifier>{5c26b9db-8885-4803-8756-00df99f3f534}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="entities">
+      <UniqueIdentifier>{905f68db-ebf8-41d6-807a-39513ccb32d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{0cb80582-c217-40d9-a9f8-2fe23b2ad0ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="multiplayer">
+      <UniqueIdentifier>{175414a7-7add-4892-bd3b-21474920d3d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="entities\fields">
+      <UniqueIdentifier>{322c2585-9e6d-400b-a7b7-4fc868521471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="players">
+      <UniqueIdentifier>{c6cd6726-dade-4cff-8fa7-5a5484425265}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="turn">
+      <UniqueIdentifier>{0292c371-45f0-4060-91cb-85470e507acd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gameState.cpp">
+      <Filter>states</Filter>
+    </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>states</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="mainMenuState.cpp">
+      <Filter>states</Filter>
+    </ClCompile>
+    <ClCompile Include="token.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="multiplayer_test.cpp">
+      <Filter>multiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="gui.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="board.cpp">
+      <Filter>entities</Filter>
+    </ClCompile>
+    <ClCompile Include="field.cpp">
+      <Filter>entities\fields</Filter>
+    </ClCompile>
+    <ClCompile Include="propertyField.cpp">
+      <Filter>entities\fields</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>players</Filter>
+    </ClCompile>
+    <ClCompile Include="turn.cpp">
+      <Filter>turn</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameState.h">
+      <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="mainMenuState.h">
+      <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="token.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="gui.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="board.h">
+      <Filter>entities</Filter>
+    </ClInclude>
+    <ClInclude Include="field.h">
+      <Filter>entities\fields</Filter>
+    </ClInclude>
+    <ClInclude Include="propertyField.h">
+      <Filter>entities\fields</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>players</Filter>
+    </ClInclude>
+    <ClInclude Include="turn.h">
+      <Filter>turn</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
