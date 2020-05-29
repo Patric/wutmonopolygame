@@ -73,7 +73,7 @@ void propertyField::initVariables()
 {
 	this->currentUpgradeLevel = 0;
 	this->numOfUpgrades = 6;
-
+	this->owner = NULL;
 
 }
 
@@ -81,11 +81,33 @@ void propertyField::initVariables()
 
 void propertyField::update(const float& dt)
 {
+	
+}
 
 
+void propertyField::onStepAction(player* playerOnField)
+{
 
+	//ask to buy this field or leave
+
+	if (playerOnField != this->owner)
+	{
+		this->chargePlayer(playerOnField, dIncome);
+		if(this->owner)
+			this->owner->wallet = this->owner->wallet + dIncome;
+	}
+	//std::cout << "Stepped on field " << this->ID << " !" << "\n";
 
 }
+
+void propertyField::buyField(player* newOwner)
+{
+	this->owner = newOwner;
+	this->chargePlayer(this->owner, this->price);
+}
+
+
+
 
 
 //Render

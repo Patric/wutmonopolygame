@@ -68,7 +68,7 @@ void board::initFields()
 
 		)
 	);
-	this->fields[this->fields.size() - 1]->ID = this->fields.size();
+	this->fields[this->fields.size() - 1]->ID = this->fields.size() - 1;
 
 
 	//bottom
@@ -94,7 +94,7 @@ void board::initFields()
 
 			)
 		);
-		this->fields[this->fields.size() - 1]->ID = this->fields.size();
+		this->fields[this->fields.size() - 1]->ID = this->fields.size() - 1;
 	}
 
 	//Left bottom
@@ -118,7 +118,7 @@ void board::initFields()
 
 		)
 	);
-	this->fields[this->fields.size() - 1]->ID = this->fields.size();
+	this->fields[this->fields.size() - 1]->ID = this->fields.size() - 1;
 
 	//Left column
 	for (unsigned int i = 0; i < this->numOfFieldsV; i++)
@@ -143,7 +143,7 @@ void board::initFields()
 				100.f
 			)
 		);
-		this->fields[this->fields.size() - 1]->ID = this->fields.size();
+		this->fields[this->fields.size() - 1]->ID = this->fields.size() - 1;
 		//std::cout << this->fields.at(3)->ID << "\n";
 	}
 	
@@ -170,7 +170,7 @@ void board::initFields()
 
 		)
 	);
-	this->fields[this->fields.size()-1]->ID = this->fields.size();
+	this->fields[this->fields.size()-1]->ID = this->fields.size() - 1;
 
 
 	//top
@@ -196,7 +196,7 @@ void board::initFields()
 
 			)
 		);
-		this->fields[this->fields.size() - 1]->ID = this->fields.size();
+		this->fields[this->fields.size() - 1]->ID = this->fields.size() - 1;
 	}
 
 
@@ -223,7 +223,7 @@ void board::initFields()
 
 		)
 	);
-	this->fields[this->fields.size() - 1]->ID = this->fields.size();
+	this->fields[this->fields.size() - 1]->ID = this->fields.size() - 1;
 
 	//Right column
 
@@ -249,7 +249,7 @@ void board::initFields()
 
 			)
 		);
-		this->fields[this->fields.size() - 1]->ID = this->fields.size();
+		this->fields[this->fields.size() - 1]->ID = this->fields.size() - 1;
 	}
 	
 

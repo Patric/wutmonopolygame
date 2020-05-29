@@ -24,11 +24,6 @@ field::~field()
 	
 }
 
-
-
-
-
-
 void field::createAndSetTitleBar()
 {
 	this->titleBar = new sf::RectangleShape;
@@ -108,6 +103,12 @@ void field::setFieldText(sf::Text* fieldText, float x, float y, int rotation, sf
 	}
 }
 
+void field::chargePlayer(player* playerOnField, int sum)
+{
+	playerOnField->wallet = playerOnField->wallet - sum;
+
+}
+
 void field::initTokenSlots()
 {
 	//Center
@@ -126,7 +127,6 @@ void field::initTokenSlots()
 	//Left up
 	this->tokenSlots[4] =  sf::Vector2f(x - k * this->defaultShape->getSize().x, y - k * this->defaultShape->getSize().x);
 }
-
 
 //Render
 
@@ -149,9 +149,10 @@ void field::render(sf::RenderTarget* target)
 }
 
 
-
 void field::update(const float& dt, sf::Vector2f mousePos)
 {
+
+
 
 }
 

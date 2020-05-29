@@ -12,6 +12,7 @@ private:
 	int numOfUpgrades;
 	//std::map<int, int>* levelPrices; //irregular level prices <level, price>
 	//std::map<int, int>* incomePerLevel; //first income then level
+	player* owner;
 	int dIncome;
 	int currentUpgradeLevel;
 	int dLevelPrice; //delta level price
@@ -39,6 +40,11 @@ public:
 	//Init methods
 	void initVariables();
 
+
+	//Field actions
+	void onStepAction(player* playerOnField);
+	void buyField(player* newOwner);
+	
 
 	//update methods
 

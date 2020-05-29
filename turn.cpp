@@ -12,8 +12,6 @@ turn::turn(float x, float y, std::vector<player*>* players, std::vector<field*>*
 	
 	//this->queue.emplace_front(this->players->at(0));
 
-	this->queue.emplace_front(this->players->at(0));
-	this->queue.emplace_front(this->players->at(1));
 
 }
 
@@ -51,19 +49,22 @@ void turn::setQueue()
 	//Setting place in the queue
 	//To improve. Works with 2 players now
 
-//	if (this->queue.size() < this->players->size())
-//	{
-//		if (this->queue.front()->lastDice <= this->activePlayer->lastDice)
-//			this->queue.emplace_front(this->activePlayer);
-//		else
-//			this->queue.emplace_back(this->activePlayer);
-//	}
+	if (this->queue.size() < this->players->size())
+	{
+
+		//actions to set queue
+
+		//for debug
+		this->queue.emplace_front(this->players->at(0));
+		this->queue.emplace_front(this->players->at(1));
+	
+	}
 }
 
 void turn::updateYourTurn(const float& dt, sf::Vector2f mousePos)
 {
 
-
+	this->setQueue();
 	this->updateButtons(mousePos, dt);
 	if (this->queue.front() == this->you)
 	{
@@ -74,7 +75,7 @@ void turn::updateYourTurn(const float& dt, sf::Vector2f mousePos)
 		
 
 		
-		this->setQueue();
+	
 	}
 
 }
@@ -178,6 +179,8 @@ void  turn::updateButtons(sf::Vector2f mousePosView, const float& dt)
 		if (this->queue.size() == this->players->size()) //move only when the queue is already set
 		{
 			this->moveToken(this->you->playerToken, dice);
+			this->fields->at(this->you->playerToken->currentFieldID)->onStepAction(this->you); //Field action on Player
+			
 		}
 		//automatically block button
 		this->buttons["END_TURN_BTN"]->unblockButton();
