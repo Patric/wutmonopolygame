@@ -63,11 +63,37 @@ namespace gui
 	};
 
 
+	
+	class infoBar 
+	{
+	private:
+		
+		
+		sf::RectangleShape shape;
+		sf::Font* font;
+		std::vector<sf::Text*> infos;
+		sf::Color color;
+		
+	
+
+
+	public:
+	
+			std::map<std::string, sf::Vector2f> positions;
+
+			infoBar(float x, float y, float width, float height, sf::Color color, sf::Font* font);
+			virtual ~infoBar();
+			void initPositions();
+
+			void addInfo(std::string position_name, std::string Text);
+			void updateInfo(std::string text, unsigned int index);
+			
+			
+			void render(sf::RenderTarget* target);
 
 
 
-
-
+	};
 }
 
 

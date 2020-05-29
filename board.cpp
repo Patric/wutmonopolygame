@@ -17,10 +17,37 @@ void board::initTurns()
 	this->cTurn = new turn(155,155,this->players, &this->fields);
 }
 
+void board::initInfoPanel()
+{
+	
+	this->infoPanel = new gui::infoBar
+	(
+		10.f,
+		this->defaultShape->getGlobalBounds().top,
+		this->defaultShape->getPosition().x - 30.f,
+		this->defaultShape->getGlobalBounds().height,
+		sf::Color(40, 40, 40, 150),
+		&this->font
+	);
+
+	std::stringstream ss;
+
+	for (auto i = 0; i < this->players->size(); i++)
+	{
+		
+		ss << "Player " << i << " wallet: " << this->players->at(i)->wallet;
+		this->infoPanel->addInfo("Center", ss.str());
+		ss.str(std::string());
+	}
+
+
+}
+
+
 void board::initComponents()
 {
 
-
+	this->initInfoPanel();
 
 }
 
@@ -35,9 +62,6 @@ void board::initTextures()
 	this->textures["TOKEN_1"] = temp;
 
 }
-
-
-
 
 void board::initFields()
 {	
@@ -302,12 +326,6 @@ sf::Texture board::loadBTexture(std::string location)
 	return temp;
 }
 
-
-
-
-
-
-
 board::board(float x, float y, float width, float height, std::vector<player*>* players, sf::Color boardColor)
 {
 	this->initTextures();
@@ -318,12 +336,10 @@ board::board(float x, float y, float width, float height, std::vector<player*>* 
 	this->players = players;
 	this->initTokens();
 	this->initTurns();
-
+	this->initComponents();
 
 	//this->players->at(0)->isActive = true;//for debug
 }
-
-
 
 board::~board()
 {
@@ -334,11 +350,14 @@ board::~board()
 	}
 	delete this->cTurn;
 	
+	delete this->infoPanel;
 
 }
 
 void board::render(sf::RenderTarget* target)
 {
+	this->infoPanel->render(target);
+
 	if (this->loadTexture && this->sprite)
 	{
 		target->draw(*this->sprite);
@@ -348,7 +367,8 @@ void board::render(sf::RenderTarget* target)
 		target->draw(*this->defaultShape);
 	}
 
-	
+	//target->draw(this->infoPanel);
+
 	for (auto i = 0; i < this->numOfFields; i++)
 	{
 		this->fields[i]->render(target);
@@ -378,8 +398,8 @@ void board::render(sf::RenderTarget* target)
 
 	}
 
-	
 
+	
 
 
 
@@ -403,9 +423,24 @@ void board::update(const float& dt, sf::Vector2f mousePos)
 		this->cTurn->moveTokenToID(this->players->at(1)->playerToken, 15);
 
 
+	std::stringstream ss;
+	for (auto i = 0; i < this->players->size(); i++)
+	{
+		
+		ss << "Player " << i << " wallet: " << this->players->at(i)->wallet;
+		this->infoPanel->updateInfo(ss.str(), i);
+		ss.str(std::string());
+	}
 
 
 
 }
+
+//void board::updateInfoPanel(const float& dt)
+//{
+//	
+//
+//
+//}
 
 

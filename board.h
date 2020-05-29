@@ -6,10 +6,11 @@ class board :
 	public entity
 {
 private:
-	
-	//std::vector<field*> propertyFields;
+	//gui
+	gui::infoBar* infoPanel;
+
+
 	std::vector<field*> fields;
-	//token* tokenTest;
 	turn* cTurn;
 	std::map<std::string, sf::Texture> textures;
 	std::vector<player*>* players;
@@ -28,7 +29,7 @@ private:
 	void initFields();
 	void initTokens();
 	void initTurns();
-
+	void initInfoPanel();
 
 
 	//Board textures
@@ -53,5 +54,6 @@ public:
 	void render(sf::RenderTarget* target);
 	void update(const float& dt, sf::Vector2f mousePos);
 
+	
 };
 
