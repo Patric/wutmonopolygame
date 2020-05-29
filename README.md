@@ -4,8 +4,12 @@ ETAP 2
 ----------------------------------------------------------------------------------------------
 Etap 2 projektu PJC to gałąź PJC-projekt-prototyp-aplikacji
 
-Aby projekt uruchomić w Visual studio należy plik .zip wypakować do katalogu o 1 wyżej niż plik main.cpp.
+Aby uruchomić program bez otwierania projektu w Visual Studio należy pobrać spakowany plik executable.zip i wypakować go. W środku znajduje się plik wykonawczy .exe oraz katalogi z zasobami. Program nie potrzebuje dodatkowych bibliotek. (a przynajmniej u mnie nie potrzebował).
+
+Aby projekt uruchomić w Visual studio należy plik z biblioteką SFML o nazwie  	SFML-2.5.1-windows-vc15-32-bit.zip wypakować do katalogu o 1 wyżej niż plik main.cpp. Linker, Precprocessor powinien być skonfigurowany w pliku z projektem.
 Dopiero zaczynam z git'em, więc przepraszam z góry za wszelkie niejasności i nieporządek w komentarzach.
+
+
 
 Jeśli chodzi o diagram klas to w dużej mierze zmieniłem go w porównaniu do etapu 1, gdyż dopiero na etapie implementacji faktycznie zrozumiałem obiektowość i przeszukałem internet w celu opracowania skutecznej mechaniki do gry. Jestem świadomy, 
 że opracowana przeze mnie mechanikajest nieco zbyt skomplikowana jak na taką grę, ale znalazłem świetny poradnik do gier RPG i 
@@ -24,7 +28,7 @@ to gracz, otrzymuje możliwość ruchu. Następnie wysyła innym graczom komunik
 this->you będzie definiowane na początku, w gameState. Oprócz tego należy dodać Menu akcji gracza w jego kolejce, a w menu czynności
 takie jak kup pole/sprzedaj pole/ulepsz pole. 
 
-Gra w trybie Release nie potrzebuje dodatkowych bibliotek, jedynie folderów. Plik config/windows.ini zawiera konfigurację.
+Plik config/windows.ini zawiera konfigurację.
 WuT Monopoly in building... //Tytuł okna
 1920 1080                   //Rozdzielczość - starałem się, aby aplikacja była skalowalna(biblioteka SFML ma taką opcję, 
                             //ale nie zauważyłem tego i dalej wszystko robiłem ręcznie.
