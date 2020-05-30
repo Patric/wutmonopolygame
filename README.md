@@ -18,8 +18,8 @@ również dzięki niemu zrozumiałem projektowanie obiektowe.
 W projekcie jeszcze wiele należy zrobić, aby to była w pełni funkcjonalna gra. Narazie działa tylko New Game -> Roll Dice, 
 po czym należy kliknąć End turn, aby kolejka przeszła na innego gracza. Ręcznie dodanych jest dwóch graczy. W przyszłości ma to
 odbywać się poprzez lobby, którego hostem będzie jeden z graczy. Pola testowe są to pola Property, czyli w przyszłości
-będzie możliwość kupna takiego pola(już jest, ale nie ma jeszcze przycisku, bo gui niestety zabiera najwięcej czasu). Przy zmianie pola
-uruchamia się funkcja pola i zabiera graczowi pieniądze z portfela.(bo gracz nie może jeszcze kupić tego pola).
+będzie możliwość kupna takiego pola(już jest, ale nie ma jeszcze przycisku, bo gui niestety zabiera najwięcej czasu). Przy zmianie pola uruchamia się funkcja pola i zabiera graczowi pieniądze z portfela.(bo gracz nie może jeszcze kupić tego pola).
+Przycisk Esc powoduje powrót do Menu
 
 Gra nie ma jeszcze komponentu sieciowego, jednak planuję załatwić to poprzez protokół TCP/IP, co już testowałem. Planuję updatować
 poszczególne czynności wykonywane przez graczy w czasie rzeczywistym i przesyłać do wszystkich innych graczy. Gracz będzie
