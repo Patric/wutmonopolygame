@@ -167,6 +167,7 @@ void propertyField::onStepAction(player* playerOnField)
 {
 	/*!
 * W zale¿noœci od tego, czy gracz jest w³aœcicielem, potencjalnym nabywc¹, czy klientem przeprowadza ró¿ne akcje.
+Wyœwietla ró¿ne menu dla kupuj¹cego, lub w³aœciciela, a dla ¿adnego z nich wywo³uje metodê chargePlayer pobieraj¹c op³atê równ¹ atrybutowi income.
 	*/
 	this->playerOnField = playerOnField;
 
