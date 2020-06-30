@@ -5,7 +5,9 @@
 
 void gameState::initBackground()
 {
-
+	/*!
+* Metoda odpowiadaj¹ca za inicjaliacjê t³a.
+	*/
 	this->background.setSize
 	(
 		sf::Vector2f
@@ -42,6 +44,9 @@ void gameState::initTextures()
 
 void gameState::initBoard()
 {
+	/*!
+* Inicjalizujê planszê. Ustala rozmiar w zale¿noœci od rozdzielczoœci oraz tworzy obiekt planszy.
+	*/
 	float board_height = this->window->getSize().y * 0.98;
 	float board_width = this->window->getSize().y * 0.98;
 	
@@ -61,6 +66,10 @@ void gameState::initBoard()
 
 void gameState::initPlayers()
 {
+	/*!
+* Inicjalizuje graczy.
+	*/
+
 	//for tests
 	this->numOfPlayers = 2;
 	sf::IpAddress testIP = "127.0.0.1";
@@ -111,6 +120,9 @@ void gameState::updateInput(const float& dt)
 
 void gameState::update(const float& dt)
 {
+	/*!
+* Odœwie¿a stan gry co 16.6 milisekund, aktualizuje stan gameStateBoard, czyli planszy oraz wciœniête klawisze.
+	*/
 	sf::Time t2 = sf::milliseconds(16.6);
 	sf::sleep(t2);
 	this->updateMousePosition();
@@ -125,7 +137,9 @@ void gameState::update(const float& dt)
 
 void gameState::render(sf::RenderTarget* target)
 {
-
+	/*!
+* W wersji debug zawiera pozycjê kursora myszy. Wyœwietla planszê gry i elementy z ni¹ zwi¹zane.
+	*/
 
 
 	target->draw(this->background);

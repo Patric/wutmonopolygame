@@ -4,7 +4,11 @@
 
 class board :
 	public entity
-{
+	/*!
+* Klasa odpowiedzialna za planszê do gry. Wszystkie elementy znajduj¹ce siê na planszy s¹ tutaj inicjalizowane.
+	*/
+{	
+
 private:
 	//gui
 	gui::infoBar* infoPanel;

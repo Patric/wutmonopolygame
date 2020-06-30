@@ -13,12 +13,20 @@
 #include <SFML/Network.hpp>
 
 enum button_states{BTN_IDLE = 0, BTN_HOVER, BTN_PRESSED};
-
+/*!
+* Namespace zawieraj¹cy mini-klasy gui.
+	*/
 namespace gui 
-{ //allows to have several button class. Using namespace since it's a samll gui library
+{ 
 
+	
+	//allows to have several button class. Using namespace since it's a samll gui library
+		/*!
+* Klasa przycisku. Odœwie¿any z zadan¹ czêstotliwoœci¹.
+	*/
 	class button
 	{
+	
 	private:
 		short unsigned buttonState;
 		float keyTime;
@@ -65,9 +73,12 @@ namespace gui
 
 
 	};
-	
+	/*!
+* Klasa paska informacyjnego.
+	*/
 	class infoBar 
 	{
+
 	private:
 		
 		
@@ -96,9 +107,13 @@ namespace gui
 
 
 	};
-
+	/*!
+* Klasa menu sk³adaj¹ca siê z obiektów klasy button.
+*/
 
 	class menu {
+
+
 	private:
 		sf::Font* font;
 

@@ -1,0 +1,135 @@
+\hypertarget{classproperty_field}{}\section{property\+Field Class Reference}
+\label{classproperty_field}\index{property\+Field@{property\+Field}}
+
+
+{\ttfamily \#include $<$property\+Field.\+h$>$}
+
+Inheritance diagram for property\+Field\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classproperty_field}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproperty_field_aec21e07dd2c6b7c3278924156dc7471c}{property\+Field}} (std\+::string \mbox{\hyperlink{classfield_a0fa76e9bb3e439757ad10e5f6032e1ff}{field\+Title}}, std\+::string \mbox{\hyperlink{classfield_aa1ee6124b7b2c31a8cf5b72b2a1e378e}{field\+Description}}, float x, float y, float width, float height, int rotation, sf\+::\+Color \mbox{\hyperlink{classfield_ae869b5c6466855de5bb00a0da4a738e4}{color}}, float price, float mortgage, int d\+Level\+Price, int d\+Income)
+\item 
+void \mbox{\hyperlink{classproperty_field_a4c2730bef86d39d723193a0b0be83255}{init\+Variables}} ()
+\item 
+void \mbox{\hyperlink{classproperty_field_a6d2773b5e1cdd56d496bf0fa81acff2c}{on\+Step\+Action}} (\mbox{\hyperlink{classplayer}{player}} $\ast$\mbox{\hyperlink{classfield_a52e61f57f292aadd141aecf8745b4605}{player\+On\+Field}})
+\item 
+void \mbox{\hyperlink{classproperty_field_a511f91ed430544655a5cab7fb8be6cc2}{buy\+Field}} (\mbox{\hyperlink{classplayer}{player}} $\ast$new\+Owner)
+\item 
+void \mbox{\hyperlink{classproperty_field_a32b21dcaf062135f50a674da30c707c9}{update}} (const float \&dt, sf\+::\+Vector2f mouse\+Pos)
+\item 
+void \mbox{\hyperlink{classproperty_field_ada6c23589e09fe31f88b75ed2ec27d11}{render}} (sf\+::\+Render\+Target $\ast$target)
+\item 
+virtual \mbox{\hyperlink{classproperty_field_a9f2a49b4d101d64f71336b10c402b0c5}{$\sim$property\+Field}} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Pole w³asnoœci mo¿liwej do nabycia. Zawiera definicjê on\+Step\+Action wyœwietlaj¹c¹ panel z opcjami dotycz¹cymi pola. 
+
+Definition at line 5 of file property\+Field.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classproperty_field_aec21e07dd2c6b7c3278924156dc7471c}\label{classproperty_field_aec21e07dd2c6b7c3278924156dc7471c}} 
+\index{property\+Field@{property\+Field}!property\+Field@{property\+Field}}
+\index{property\+Field@{property\+Field}!property\+Field@{property\+Field}}
+\subsubsection{\texorpdfstring{property\+Field()}{propertyField()}}
+{\footnotesize\ttfamily property\+Field\+::property\+Field (\begin{DoxyParamCaption}\item[{std\+::string}]{field\+Title,  }\item[{std\+::string}]{field\+Description,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{int}]{rotation,  }\item[{sf\+::\+Color}]{color,  }\item[{float}]{price,  }\item[{float}]{mortgage,  }\item[{int}]{d\+Level\+Price,  }\item[{int}]{d\+Income }\end{DoxyParamCaption})}
+
+~\newline
+Tworzy pole w danym miejscu z domyœlnymi parametrami.
+
+Definition at line 3 of file property\+Field.\+cpp.
+
+\mbox{\Hypertarget{classproperty_field_a9f2a49b4d101d64f71336b10c402b0c5}\label{classproperty_field_a9f2a49b4d101d64f71336b10c402b0c5}} 
+\index{property\+Field@{property\+Field}!````~property\+Field@{$\sim$property\+Field}}
+\index{````~property\+Field@{$\sim$property\+Field}!property\+Field@{property\+Field}}
+\subsubsection{\texorpdfstring{$\sim$property\+Field()}{~propertyField()}}
+{\footnotesize\ttfamily property\+Field\+::$\sim$property\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 70 of file property\+Field.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classproperty_field_a511f91ed430544655a5cab7fb8be6cc2}\label{classproperty_field_a511f91ed430544655a5cab7fb8be6cc2}} 
+\index{property\+Field@{property\+Field}!buy\+Field@{buy\+Field}}
+\index{buy\+Field@{buy\+Field}!property\+Field@{property\+Field}}
+\subsubsection{\texorpdfstring{buy\+Field()}{buyField()}}
+{\footnotesize\ttfamily void property\+Field\+::buy\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classplayer}{player}} $\ast$}]{new\+Owner }\end{DoxyParamCaption})}
+
+~\newline
+Zmienia w³aœciciela niezakupionego pola i pobiera op³atê.
+
+Definition at line 228 of file property\+Field.\+cpp.
+
+\mbox{\Hypertarget{classproperty_field_a4c2730bef86d39d723193a0b0be83255}\label{classproperty_field_a4c2730bef86d39d723193a0b0be83255}} 
+\index{property\+Field@{property\+Field}!init\+Variables@{init\+Variables}}
+\index{init\+Variables@{init\+Variables}!property\+Field@{property\+Field}}
+\subsubsection{\texorpdfstring{init\+Variables()}{initVariables()}}
+{\footnotesize\ttfamily void property\+Field\+::init\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 81 of file property\+Field.\+cpp.
+
+\mbox{\Hypertarget{classproperty_field_a6d2773b5e1cdd56d496bf0fa81acff2c}\label{classproperty_field_a6d2773b5e1cdd56d496bf0fa81acff2c}} 
+\index{property\+Field@{property\+Field}!on\+Step\+Action@{on\+Step\+Action}}
+\index{on\+Step\+Action@{on\+Step\+Action}!property\+Field@{property\+Field}}
+\subsubsection{\texorpdfstring{on\+Step\+Action()}{onStepAction()}}
+{\footnotesize\ttfamily void property\+Field\+::on\+Step\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classplayer}{player}} $\ast$}]{player\+On\+Field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+W zale¿noœci od tego, czy gracz jest w³aœcicielem, potencjalnym nabywc¹, czy klientem przeprowadza ró¿ne akcje.
+
+Implements \mbox{\hyperlink{classfield_a940f9ab5e5a33ce71f77c88c5b312300}{field}}.
+
+
+
+Definition at line 166 of file property\+Field.\+cpp.
+
+\mbox{\Hypertarget{classproperty_field_ada6c23589e09fe31f88b75ed2ec27d11}\label{classproperty_field_ada6c23589e09fe31f88b75ed2ec27d11}} 
+\index{property\+Field@{property\+Field}!render@{render}}
+\index{render@{render}!property\+Field@{property\+Field}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void property\+Field\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+Jeœli istnieje menu to renderuje menu i pole. Jeœli nie to tylko pole.
+
+Reimplemented from \mbox{\hyperlink{classfield_a3b2cdb0e289aa1b47ce79360b975f6a9}{field}}.
+
+
+
+Definition at line 241 of file property\+Field.\+cpp.
+
+\mbox{\Hypertarget{classproperty_field_a32b21dcaf062135f50a674da30c707c9}\label{classproperty_field_a32b21dcaf062135f50a674da30c707c9}} 
+\index{property\+Field@{property\+Field}!update@{update}}
+\index{update@{update}!property\+Field@{property\+Field}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void property\+Field\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classfield_a526cc088056de1c0efdcf55fe1062e78}{field}}.
+
+
+
+Definition at line 94 of file property\+Field.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{property_field_8h}{property\+Field.\+h}}\item 
+\mbox{\hyperlink{property_field_8cpp}{property\+Field.\+cpp}}\end{DoxyCompactItemize}

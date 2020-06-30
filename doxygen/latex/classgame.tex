@@ -1,0 +1,132 @@
+\hypertarget{classgame}{}\section{game Class Reference}
+\label{classgame}\index{game@{game}}
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_ad9c102127b5038f880067ad6c9198d38}{game}} ()
+\item 
+virtual \mbox{\hyperlink{classgame_ae87abd20c4d8a7906fa48e690a5f1d07}{$\sim$game}} ()
+\item 
+void \mbox{\hyperlink{classgame_a2b586acb617803d6e1bd65f3bb53a07a}{end\+Application}} ()
+\item 
+void \mbox{\hyperlink{classgame_a4656c782e16c9cea75542ec9c89636c9}{update\+Dt}} ()
+\item 
+void \mbox{\hyperlink{classgame_a81c0952265463fdf971cf712a9aba961}{update\+S\+F\+M\+L\+Events}} ()
+\item 
+void \mbox{\hyperlink{classgame_a2be7307eb3c9065fc7c728edd68d0a78}{update}} ()
+\item 
+void \mbox{\hyperlink{classgame_aabb612769a8b4d11248f97a758bf48fa}{render}} ()
+\item 
+void \mbox{\hyperlink{classgame_ac0989b3bcd3a7a806cd7c3211bc339e8}{run}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Glowna klasa gry. Zmiana ekranów dzialania na zasadzie maszyny stanow. Klasa zawiera stos wskaznikow na stany. Odswiezanie odbywa sie synchronicznie z zadanym okresem czasu. 
+
+Definition at line 7 of file game.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_ad9c102127b5038f880067ad6c9198d38}\label{classgame_ad9c102127b5038f880067ad6c9198d38}} 
+\index{game@{game}!game@{game}}
+\index{game@{game}!game@{game}}
+\subsubsection{\texorpdfstring{game()}{game()}}
+{\footnotesize\ttfamily game\+::game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Inicjalizuje stany oraz okno programu.
+
+Definition at line 94 of file game.\+cpp.
+
+\mbox{\Hypertarget{classgame_ae87abd20c4d8a7906fa48e690a5f1d07}\label{classgame_ae87abd20c4d8a7906fa48e690a5f1d07}} 
+\index{game@{game}!````~game@{$\sim$game}}
+\index{````~game@{$\sim$game}!game@{game}}
+\subsubsection{\texorpdfstring{$\sim$game()}{~game()}}
+{\footnotesize\ttfamily game\+::$\sim$game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+Niszczy utworzone okno oraz po kolei stany ze stosu a¿ do opró¿nienia.
+
+Definition at line 105 of file game.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_a2b586acb617803d6e1bd65f3bb53a07a}\label{classgame_a2b586acb617803d6e1bd65f3bb53a07a}} 
+\index{game@{game}!end\+Application@{end\+Application}}
+\index{end\+Application@{end\+Application}!game@{game}}
+\subsubsection{\texorpdfstring{end\+Application()}{endApplication()}}
+{\footnotesize\ttfamily void game\+::end\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Wykonuje czynnoœci po zainicjowaniu zamykania programu.
+
+Definition at line 124 of file game.\+cpp.
+
+\mbox{\Hypertarget{classgame_aabb612769a8b4d11248f97a758bf48fa}\label{classgame_aabb612769a8b4d11248f97a758bf48fa}} 
+\index{game@{game}!render@{render}}
+\index{render@{render}!game@{game}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void game\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+G³ówna metoda rysowania elementów. Czyœci ekran, a nastêpnie rysuje elementy na zainicjowanym oknie, które s¹ zawarte w stanie, kóry jest aktualnie na górze stosu.
+
+Definition at line 191 of file game.\+cpp.
+
+\mbox{\Hypertarget{classgame_ac0989b3bcd3a7a806cd7c3211bc339e8}\label{classgame_ac0989b3bcd3a7a806cd7c3211bc339e8}} 
+\index{game@{game}!run@{run}}
+\index{run@{run}!game@{game}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void game\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+G³ówna pêtla gry, dzia³aj¹ca gdy okno jest otwarte i aktualizuj¹ca aktualny stan i rysuj¹ca go.
+
+Definition at line 217 of file game.\+cpp.
+
+\mbox{\Hypertarget{classgame_a2be7307eb3c9065fc7c728edd68d0a78}\label{classgame_a2be7307eb3c9065fc7c728edd68d0a78}} 
+\index{game@{game}!update@{update}}
+\index{update@{update}!game@{game}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void game\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+G³ówna metoda aktualizacji gry. Aktualizuje eventy\+S\+F\+M\+L\+Events oraz obs³uguje stany.
+
+Definition at line 159 of file game.\+cpp.
+
+\mbox{\Hypertarget{classgame_a4656c782e16c9cea75542ec9c89636c9}\label{classgame_a4656c782e16c9cea75542ec9c89636c9}} 
+\index{game@{game}!update\+Dt@{update\+Dt}}
+\index{update\+Dt@{update\+Dt}!game@{game}}
+\subsubsection{\texorpdfstring{update\+Dt()}{updateDt()}}
+{\footnotesize\ttfamily void game\+::update\+Dt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Aktualizuje atrybut delty czasowej iloœci¹ czasu potrzebnej do wyrenderowania jednej klatki.
+
+Definition at line 134 of file game.\+cpp.
+
+\mbox{\Hypertarget{classgame_a81c0952265463fdf971cf712a9aba961}\label{classgame_a81c0952265463fdf971cf712a9aba961}} 
+\index{game@{game}!update\+S\+F\+M\+L\+Events@{update\+S\+F\+M\+L\+Events}}
+\index{update\+S\+F\+M\+L\+Events@{update\+S\+F\+M\+L\+Events}!game@{game}}
+\subsubsection{\texorpdfstring{update\+S\+F\+M\+L\+Events()}{updateSFMLEvents()}}
+{\footnotesize\ttfamily void game\+::update\+S\+F\+M\+L\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Aktualizuje Eventy S\+F\+ML, do których zaliczaj¹ siê klikniêcia myszyny, zamykanie okien oraz wciskanie przycisków. Aktualnie obs³uguje tylko zamykanie okna.
+
+Definition at line 147 of file game.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{game_8h}{game.\+h}}\item 
+\mbox{\hyperlink{game_8cpp}{game.\+cpp}}\end{DoxyCompactItemize}

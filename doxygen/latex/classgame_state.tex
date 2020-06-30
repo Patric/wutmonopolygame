@@ -1,0 +1,109 @@
+\hypertarget{classgame_state}{}\section{game\+State Class Reference}
+\label{classgame_state}\index{game\+State@{game\+State}}
+
+
+{\ttfamily \#include $<$game\+State.\+h$>$}
+
+Inheritance diagram for game\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgame_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_state_a5fc11204e599a3d040ab255eb303a500}{game\+State}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classstate_a1bd5650a39b718f10a4efd5fb084e8b7}{window}}, std\+::stack$<$ \mbox{\hyperlink{classstate}{state}} $\ast$$>$ $\ast$\mbox{\hyperlink{classstate_af087bc20fa3153ddb682f8a223db682f}{states}})
+\item 
+virtual \mbox{\hyperlink{classgame_state_aff0b262e002173990841199d34803fe9}{$\sim$game\+State}} ()
+\item 
+void \mbox{\hyperlink{classgame_state_a5d725ba8f9cdd587f389b820c37e0020}{update\+Input}} (const float \&dt)
+\item 
+void \mbox{\hyperlink{classgame_state_a17b43f4eac057e2262445919ee585ca1}{update}} (const float \&dt)
+\item 
+void \mbox{\hyperlink{classgame_state_ac300ce2d67e175bd28335921d428b8bc}{render}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Klasa odpowiedzalna za ekran gry, stan gry. Przechowuje informacje dotycz¹ce graczy. 
+
+Definition at line 6 of file game\+State.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_state_a5fc11204e599a3d040ab255eb303a500}\label{classgame_state_a5fc11204e599a3d040ab255eb303a500}} 
+\index{game\+State@{game\+State}!game\+State@{game\+State}}
+\index{game\+State@{game\+State}!game\+State@{game\+State}}
+\subsubsection{\texorpdfstring{game\+State()}{gameState()}}
+{\footnotesize\ttfamily game\+State\+::game\+State (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::stack$<$ \mbox{\hyperlink{classstate}{state}} $\ast$$>$ $\ast$}]{states }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file game\+State.\+cpp.
+
+\mbox{\Hypertarget{classgame_state_aff0b262e002173990841199d34803fe9}\label{classgame_state_aff0b262e002173990841199d34803fe9}} 
+\index{game\+State@{game\+State}!````~game\+State@{$\sim$game\+State}}
+\index{````~game\+State@{$\sim$game\+State}!game\+State@{game\+State}}
+\subsubsection{\texorpdfstring{$\sim$game\+State()}{~gameState()}}
+{\footnotesize\ttfamily game\+State\+::$\sim$game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 97 of file game\+State.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_state_ac300ce2d67e175bd28335921d428b8bc}\label{classgame_state_ac300ce2d67e175bd28335921d428b8bc}} 
+\index{game\+State@{game\+State}!render@{render}}
+\index{render@{render}!game\+State@{game\+State}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void game\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+W wersji debug zawiera pozycjê kursora myszy. Wyœwietla planszê gry i elementy z ni¹ zwi¹zane.
+
+Implements \mbox{\hyperlink{classstate_a53ee61fec5b4c802f2bfafec487dfc25}{state}}.
+
+
+
+Definition at line 138 of file game\+State.\+cpp.
+
+\mbox{\Hypertarget{classgame_state_a17b43f4eac057e2262445919ee585ca1}\label{classgame_state_a17b43f4eac057e2262445919ee585ca1}} 
+\index{game\+State@{game\+State}!update@{update}}
+\index{update@{update}!game\+State@{game\+State}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void game\+State\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+Odœwie¿a stan gry co 16.\+6 milisekund, aktualizuje stan game\+State\+Board, czyli planszy oraz wciœniête klawisze.
+
+Implements \mbox{\hyperlink{classstate_a02d3d37c25241efd578fdcae98ef1df8}{state}}.
+
+
+
+Definition at line 121 of file game\+State.\+cpp.
+
+\mbox{\Hypertarget{classgame_state_a5d725ba8f9cdd587f389b820c37e0020}\label{classgame_state_a5d725ba8f9cdd587f389b820c37e0020}} 
+\index{game\+State@{game\+State}!update\+Input@{update\+Input}}
+\index{update\+Input@{update\+Input}!game\+State@{game\+State}}
+\subsubsection{\texorpdfstring{update\+Input()}{updateInput()}}
+{\footnotesize\ttfamily void game\+State\+::update\+Input (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classstate_a1f124791a5e818794ba0eb1ac25bff99}{state}}.
+
+
+
+Definition at line 112 of file game\+State.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{game_state_8h}{game\+State.\+h}}\item 
+\mbox{\hyperlink{game_state_8cpp}{game\+State.\+cpp}}\end{DoxyCompactItemize}

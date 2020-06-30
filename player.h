@@ -4,7 +4,12 @@
 //#include "propertyField.h" //newesst
 
 class player
+	/*!
+* Klasa gracza. W domyœle ma zawieraæ nickname gracza, jego adres ip, który ma slu¿yæ komunikacji w sieci lokalnej.
+Zawiera tak¿e token gracza, jego stan konta oraz ostatni¹ iloœæ wyrzuconych oczek.
+	*/
 {
+	
 private:
 	sf::IpAddress ipAddress;
 

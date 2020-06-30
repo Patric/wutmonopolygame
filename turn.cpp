@@ -29,7 +29,9 @@ turn::~turn()
 }
 
 void turn::passTurn()
-{
+{	/*!
+* Przekazuje turê do nastepnego gracza w kolejce.
+	*/
 	this->queue.emplace_front(this->queue.back());
 	this->queue.pop_back();
 
@@ -41,7 +43,9 @@ void turn::passTurn()
 
 
 void turn::setQueue()
-{
+{	/*!
+* Ustala kolejkê graczy.
+	*/
 	//Setting place in the queue
 	//To improve. Works with 2 players now
 
@@ -78,7 +82,9 @@ void turn::updateYourTurn(const float& dt, sf::Vector2f mousePos)
 
 
 void turn::waitForTurn()
-{
+{	/*!
+* Odblokowuje przycisk ROLL_DICE, gdy graczy otrzymuje ruch.
+	*/
 	//listening for turn to come
 
 	if (this->moveAvailabe)
@@ -145,7 +151,9 @@ void turn::initButtons()
 }
 
 void turn::initDice()
-{
+{	/*!
+* Inicjalizuje kostkê.
+	*/
 	this->dots.setString("Waiting for players...");
 	this->dots.setFont(this->font);
 	this->dots.setCharacterSize(40);
@@ -226,6 +234,9 @@ void turn::renderDice(sf::RenderTarget* target)
 
 void turn::updateDice()
 {
+	/*!
+* Aktualizuje kostkê poprzez losowanie cyfry od 1 do 6.
+	*/
 	srand(time(NULL));
 	//Generating random number form 1 to 6
 	this->dice = rand() % 6 + 1;
@@ -235,7 +246,9 @@ void turn::updateDice()
 //tokentomove will be be this->Player_id->token->mmoveToID
 void turn::moveTokenToID(token* tokenToMove, int fieldID)
 {
-
+	/*!
+* Przesuwa token do pola o zadanym ID.
+	*/
 
 	tokenToMove->setPosition(
 		this->fields->at(fieldID)->getTokenSlot().x,
@@ -247,6 +260,9 @@ void turn::moveTokenToID(token* tokenToMove, int fieldID)
 
 void turn::moveToken(token* tokenToMove, int numOfFields)
 {
+	/*!
+* Przesuwa token o okreœlon¹ liczbê pól.
+	*/
 	auto i = 0;
 	for (i = 0; i < abs(numOfFields); i++)
 	{

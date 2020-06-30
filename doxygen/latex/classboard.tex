@@ -1,0 +1,90 @@
+\hypertarget{classboard}{}\section{board Class Reference}
+\label{classboard}\index{board@{board}}
+
+
+{\ttfamily \#include $<$board.\+h$>$}
+
+Inheritance diagram for board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classboard}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classboard_ae4a39ba645ad37214ecc99b4a9fe0ed1}{board}} (float x, float y, float width, float height, std\+::vector$<$ \mbox{\hyperlink{classplayer}{player}} $\ast$$>$ $\ast$players, const sf\+::\+Color board\+Color)
+\item 
+virtual \mbox{\hyperlink{classboard_a978427d3593354f5d735a766585a2ad2}{$\sim$board}} ()
+\item 
+void \mbox{\hyperlink{classboard_a092056b291f6ff6cb438903a5e416ecb}{render}} (sf\+::\+Render\+Target $\ast$target)
+\item 
+void \mbox{\hyperlink{classboard_a73a36842b85ae6074c10d9cd2fd8592b}{update}} (const float \&dt, sf\+::\+Vector2f mouse\+Pos)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Klasa odpowiedzialna za planszê do gry. Wszystkie elementy znajduj¹ce siê na planszy s¹ tutaj inicjalizowane. 
+
+Definition at line 5 of file board.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classboard_ae4a39ba645ad37214ecc99b4a9fe0ed1}\label{classboard_ae4a39ba645ad37214ecc99b4a9fe0ed1}} 
+\index{board@{board}!board@{board}}
+\index{board@{board}!board@{board}}
+\subsubsection{\texorpdfstring{board()}{board()}}
+{\footnotesize\ttfamily board\+::board (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classplayer}{player}} $\ast$$>$ $\ast$}]{players,  }\item[{const sf\+::\+Color}]{board\+Color }\end{DoxyParamCaption})}
+
+~\newline
+Inicjalizuje powstanie nowej planszy. Nadaje domyœlne parametry. Inicjalizuje tekstury, zmienne, rozmiary, pozycjê, pola, graczy, tokeny, turê, komponenty.
+
+Definition at line 346 of file board.\+cpp.
+
+\mbox{\Hypertarget{classboard_a978427d3593354f5d735a766585a2ad2}\label{classboard_a978427d3593354f5d735a766585a2ad2}} 
+\index{board@{board}!````~board@{$\sim$board}}
+\index{````~board@{$\sim$board}!board@{board}}
+\subsubsection{\texorpdfstring{$\sim$board()}{~board()}}
+{\footnotesize\ttfamily board\+::$\sim$board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 365 of file board.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classboard_a092056b291f6ff6cb438903a5e416ecb}\label{classboard_a092056b291f6ff6cb438903a5e416ecb}} 
+\index{board@{board}!render@{render}}
+\index{render@{render}!board@{board}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void board\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+Rysuje w oknie wszystkie elementy planszy.
+
+Reimplemented from \mbox{\hyperlink{classentity_a5b083ead5c77ab929809c662d71f37f6}{entity}}.
+
+
+
+Definition at line 378 of file board.\+cpp.
+
+\mbox{\Hypertarget{classboard_a73a36842b85ae6074c10d9cd2fd8592b}\label{classboard_a73a36842b85ae6074c10d9cd2fd8592b}} 
+\index{board@{board}!update@{update}}
+\index{update@{update}!board@{board}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void board\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos }\end{DoxyParamCaption})}
+
+~\newline
+Aktualizuje wszystkie elementy na planszy.
+
+Definition at line 434 of file board.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{board_8h}{board.\+h}}\item 
+\mbox{\hyperlink{board_8cpp}{board.\+cpp}}\end{DoxyCompactItemize}

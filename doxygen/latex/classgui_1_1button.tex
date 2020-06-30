@@ -1,0 +1,161 @@
+\hypertarget{classgui_1_1button}{}\section{gui\+:\+:button Class Reference}
+\label{classgui_1_1button}\index{gui\+::button@{gui\+::button}}
+
+
+{\ttfamily \#include $<$gui.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgui_1_1button_ae0f718c924c548b17aa3637e22b3de27}{button}} (float x, float y, float width, float height, sf\+::\+Font $\ast$font, std\+::string \mbox{\hyperlink{classgui_1_1button_a5f95923cae850d453ebed23eb759e84a}{text}}, sf\+::\+Color idle\+Color, sf\+::\+Color hover\+Color, sf\+::\+Color pressed\+Color)
+\item 
+virtual \mbox{\hyperlink{classgui_1_1button_aff168bb8fb7c36888cbccb3750558f65}{$\sim$button}} ()
+\item 
+const bool \mbox{\hyperlink{classgui_1_1button_aa03c22e8dd1ce6cfbddc71bf0365831e}{is\+Pressed}} () const
+\item 
+void \mbox{\hyperlink{classgui_1_1button_a28031233c189ce7fa86b1f2a2cb81413}{block\+Button}} ()
+\item 
+void \mbox{\hyperlink{classgui_1_1button_af804e1dbdf79c46f2d23e6dc05e3b827}{unblock\+Button}} ()
+\item 
+const bool \mbox{\hyperlink{classgui_1_1button_aeae7443bf73898b5fa193a82f66c1934}{get\+Key\+Time}} ()
+\item 
+void \mbox{\hyperlink{classgui_1_1button_add8e160f9649b1acf409185fc8569f5a}{update\+Key\+Time}} (const float \&dt)
+\item 
+void \mbox{\hyperlink{classgui_1_1button_a931a0a0d5f9e3a1d60281ea37287ec90}{update}} (sf\+::\+Vector2f mouse\+Pos, const float \&dt)
+\item 
+void \mbox{\hyperlink{classgui_1_1button_afc80af563256b7f63c6e85e5017d9bdd}{render}} (sf\+::\+Render\+Target $\ast$target)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Text \mbox{\hyperlink{classgui_1_1button_a5f95923cae850d453ebed23eb759e84a}{text}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa przycisku. Odœwie¿any z zadan¹ czêstotliwoœci¹. 
+
+Definition at line 27 of file gui.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgui_1_1button_ae0f718c924c548b17aa3637e22b3de27}\label{classgui_1_1button_ae0f718c924c548b17aa3637e22b3de27}} 
+\index{gui\+::button@{gui\+::button}!button@{button}}
+\index{button@{button}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{button()}{button()}}
+{\footnotesize\ttfamily gui\+::button\+::button (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{sf\+::\+Font $\ast$}]{font,  }\item[{std\+::string}]{text,  }\item[{sf\+::\+Color}]{idle\+Color,  }\item[{sf\+::\+Color}]{hover\+Color,  }\item[{sf\+::\+Color}]{pressed\+Color }\end{DoxyParamCaption})}
+
+~\newline
+Tworzy przycisk z zadanych parametrów. Domyœlnie nie jest zablokowany.
+
+Definition at line 4 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1button_aff168bb8fb7c36888cbccb3750558f65}\label{classgui_1_1button_aff168bb8fb7c36888cbccb3750558f65}} 
+\index{gui\+::button@{gui\+::button}!````~button@{$\sim$button}}
+\index{````~button@{$\sim$button}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{$\sim$button()}{~button()}}
+{\footnotesize\ttfamily gui\+::button\+::$\sim$button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 59 of file gui.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgui_1_1button_a28031233c189ce7fa86b1f2a2cb81413}\label{classgui_1_1button_a28031233c189ce7fa86b1f2a2cb81413}} 
+\index{gui\+::button@{gui\+::button}!block\+Button@{block\+Button}}
+\index{block\+Button@{block\+Button}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{block\+Button()}{blockButton()}}
+{\footnotesize\ttfamily void gui\+::button\+::block\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Blokuje przycisk, zmieniaj¹c flagê blocked na true
+
+Definition at line 77 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1button_aeae7443bf73898b5fa193a82f66c1934}\label{classgui_1_1button_aeae7443bf73898b5fa193a82f66c1934}} 
+\index{gui\+::button@{gui\+::button}!get\+Key\+Time@{get\+Key\+Time}}
+\index{get\+Key\+Time@{get\+Key\+Time}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{get\+Key\+Time()}{getKeyTime()}}
+{\footnotesize\ttfamily const bool gui\+::button\+::get\+Key\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Pobiera aktualny czas przycisku.
+
+Definition at line 94 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1button_aa03c22e8dd1ce6cfbddc71bf0365831e}\label{classgui_1_1button_aa03c22e8dd1ce6cfbddc71bf0365831e}} 
+\index{gui\+::button@{gui\+::button}!is\+Pressed@{is\+Pressed}}
+\index{is\+Pressed@{is\+Pressed}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{is\+Pressed()}{isPressed()}}
+{\footnotesize\ttfamily const bool gui\+::button\+::is\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+~\newline
+Sprawdza stan wciœniêcia przycisku.
+
+Definition at line 67 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1button_afc80af563256b7f63c6e85e5017d9bdd}\label{classgui_1_1button_afc80af563256b7f63c6e85e5017d9bdd}} 
+\index{gui\+::button@{gui\+::button}!render@{render}}
+\index{render@{render}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void gui\+::button\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line 168 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1button_af804e1dbdf79c46f2d23e6dc05e3b827}\label{classgui_1_1button_af804e1dbdf79c46f2d23e6dc05e3b827}} 
+\index{gui\+::button@{gui\+::button}!unblock\+Button@{unblock\+Button}}
+\index{unblock\+Button@{unblock\+Button}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{unblock\+Button()}{unblockButton()}}
+{\footnotesize\ttfamily void gui\+::button\+::unblock\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+I\+Odblokowuje przycisk poprzez zmianê flagi blocked na false.
+
+Definition at line 85 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1button_a931a0a0d5f9e3a1d60281ea37287ec90}\label{classgui_1_1button_a931a0a0d5f9e3a1d60281ea37287ec90}} 
+\index{gui\+::button@{gui\+::button}!update@{update}}
+\index{update@{update}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void gui\+::button\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{mouse\+Pos,  }\item[{const float \&}]{dt }\end{DoxyParamCaption})}
+
+~\newline
+I\+Aktualizuje stan przycisku. Sprawdza, czy kursor jest nad przyciskiem, czy jest wciœniêty, zablokowany.
+
+Definition at line 122 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1button_add8e160f9649b1acf409185fc8569f5a}\label{classgui_1_1button_add8e160f9649b1acf409185fc8569f5a}} 
+\index{gui\+::button@{gui\+::button}!update\+Key\+Time@{update\+Key\+Time}}
+\index{update\+Key\+Time@{update\+Key\+Time}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{update\+Key\+Time()}{updateKeyTime()}}
+{\footnotesize\ttfamily void gui\+::button\+::update\+Key\+Time (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})}
+
+~\newline
+Aktualizuje czas przycisku. Pozwala na unikniêcie wielokliku przy d³u¿szym przytrzymaniu myszy.
+
+Definition at line 109 of file gui.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classgui_1_1button_a5f95923cae850d453ebed23eb759e84a}\label{classgui_1_1button_a5f95923cae850d453ebed23eb759e84a}} 
+\index{gui\+::button@{gui\+::button}!text@{text}}
+\index{text@{text}!gui\+::button@{gui\+::button}}
+\subsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily sf\+::\+Text gui\+::button\+::text}
+
+
+
+Definition at line 47 of file gui.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gui_8h}{gui.\+h}}\item 
+\mbox{\hyperlink{gui_8cpp}{gui.\+cpp}}\end{DoxyCompactItemize}

@@ -8,6 +8,10 @@
 
 void game::initStates()
 {
+	/*!
+* Inicjalizuje stany poprzez umieszczenie na górze stosu stanu menu. Ka¿dy stan ma wskaŸnik na stos wskaŸników stanów. 
+	*/
+
 	//puts new game state on top of the stack
 	//states itself is just a regular stack. We need to send an adress to a pointer that can handle it
 	this->states.push(new mainMenuState(this->window, &this->states)); 
@@ -16,6 +20,9 @@ void game::initStates()
 
 void game::initWindow()
 {
+	/*!
+* Inicjalizuje okno programu z konfiguracj¹ z pliku Config/window.ini.
+	*/
 
 	//Create SFML window using options from window.ini file
 	std::ifstream ifs("Config/window.ini"); 
@@ -72,6 +79,9 @@ void game::initWindow()
 //default values for safe guard, there might be errors if we don't do that
 void game::initVariables()
 {
+	/*!
+* Inicjalizuje atrybuty klasy, nadaj¹c im domyœlne wartoœci pocz¹tkowe.
+	*/
 	this->window = NULL;
 	this->fullscreen = false;
 	this->dt = 0.f;
@@ -83,6 +93,9 @@ void game::initVariables()
 //Constructors/Destructors
 game::game()
 {
+	/*!
+* Inicjalizuje stany oraz okno programu.
+	*/
 	this->initWindow();
 	this->initStates();
 }
@@ -91,6 +104,9 @@ game::game()
 
 game::~game()
 {
+	/*!
+* Niszczy utworzone okno oraz po kolei stany ze stosu a¿ do opró¿nienia.
+	*/
 	delete this -> window;
 
 	//we do that until states are not empty
@@ -107,14 +123,21 @@ game::~game()
 //Regular
 void game::endApplication()
 {
+	/*!
+* Wykonuje czynnoœci po zainicjowaniu zamykania programu.
+	*/
 	std::cout << "Ending application...\n";
 		
 
 }
 //Update
 void game::updateDt()
-
-{	/*Updates the dt variable with the time it takes to update and render one frame.*/
+{	
+	/*!
+* Aktualizuje atrybut delty czasowej iloœci¹ czasu potrzebnej do wyrenderowania jednej klatki.
+	*/
+	
+	/*Updates the dt variable with the time it takes to update and render one frame.*/
 
 	this->dt = this->dtClock.restart().asSeconds();
 	//system("cls");
@@ -123,6 +146,9 @@ void game::updateDt()
 
 void game::updateSFMLEvents()
 {
+	/*!
+* Aktualizuje Eventy SFML, do których zaliczaj¹ siê klikniêcia myszyny, zamykanie okien oraz wciskanie przycisków. Aktualnie obs³uguje tylko zamykanie okna.
+	*/
 	while (this->window->pollEvent(this->sfEvent))
 	{
 		if (this->sfEvent.type == sf::Event::Closed)
@@ -131,7 +157,9 @@ void game::updateSFMLEvents()
 }
 
 void game::update()
-{
+{	/*!
+* G³ówna metoda aktualizacji gry. Aktualizuje eventySFMLEvents oraz obs³uguje stany.
+	*/
 	this->updateSFMLEvents();
 		
 	if (!this->states.empty()) //if there is a state on the stack
@@ -162,7 +190,9 @@ void game::update()
 
 void game::render()
 {
-
+	/*!
+* G³ówna metoda rysowania elementów. Czyœci ekran, a nastêpnie rysuje elementy na zainicjowanym oknie, które s¹ zawarte w stanie, kóry jest aktualnie na górze stosu.
+	*/
 	this->window->clear();
 
 	//Render items
@@ -186,7 +216,9 @@ void game::render()
 
 void game::run()
 {
-
+	/*!
+* G³ówna pêtla gry, dzia³aj¹ca gdy okno jest otwarte i aktualizuj¹ca aktualny stan i rysuj¹ca go.
+	*/
 
 	while (this -> window->isOpen()) {
 

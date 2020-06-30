@@ -1,0 +1,304 @@
+\hypertarget{classfield}{}\section{field Class Reference}
+\label{classfield}\index{field@{field}}
+
+
+{\ttfamily \#include $<$field.\+h$>$}
+
+Inheritance diagram for field\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classfield}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfield_a35665d2e0c29e9125ae8ad082600254a}{field}} ()
+\item 
+virtual \mbox{\hyperlink{classfield_a600cf76c8c366764a8e0e6a48e43d0fd}{$\sim$field}} ()
+\item 
+virtual void \mbox{\hyperlink{classfield_a4a30d7fe2bdc0084b4b9a5f102c31e39}{init\+Token\+Slots}} ()
+\item 
+virtual void \mbox{\hyperlink{classfield_a940f9ab5e5a33ce71f77c88c5b312300}{on\+Step\+Action}} (\mbox{\hyperlink{classplayer}{player}} $\ast$\mbox{\hyperlink{classfield_a52e61f57f292aadd141aecf8745b4605}{player\+On\+Field}})=0
+\item 
+virtual void \mbox{\hyperlink{classfield_a3b2cdb0e289aa1b47ce79360b975f6a9}{render}} (sf\+::\+Render\+Target $\ast$target)
+\item 
+virtual void \mbox{\hyperlink{classfield_a526cc088056de1c0efdcf55fe1062e78}{update}} (const float \&dt, sf\+::\+Vector2f mouse\+Pos)
+\item 
+virtual sf\+::\+Vector2f \mbox{\hyperlink{classfield_a7346dd19ca40aff0739451ed99cda6cb}{get\+Token\+Slot}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classfield_ac829935acd985295259828967292eb91}{ID}}
+\item 
+std\+::map$<$ int, sf\+::\+Vector2f $>$ \mbox{\hyperlink{classfield_a728e63bc476730a19d24e0b9e51da371}{token\+Slots}}
+\item 
+sf\+::\+Text \mbox{\hyperlink{classfield_ab03c33568f190a5c3ca4d33b4cd778ba}{field\+Type}}
+\item 
+sf\+::\+Text \mbox{\hyperlink{classfield_aa1ee6124b7b2c31a8cf5b72b2a1e378e}{field\+Description}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classfield_a4f68652f2eecabec8db421ac426e77b5}{create\+And\+Set\+Title\+Bar}} ()
+\item 
+virtual void \mbox{\hyperlink{classfield_a9341d5cedf072190186199f9abea728f}{set\+Field\+Text}} (sf\+::\+Text $\ast$field\+Text, float x, float y, int rotation, sf\+::\+Font \mbox{\hyperlink{classfield_a1aff76778baa8007044831e512a5cd8e}{font}}, int \mbox{\hyperlink{classentity_a2b2741d5d3818e5d6d8c583dc92d2a14}{font\+Size}}, sf\+::\+Color \mbox{\hyperlink{classfield_ae869b5c6466855de5bb00a0da4a738e4}{color}}, std\+::string text)
+\item 
+virtual void \mbox{\hyperlink{classfield_a9f906f786bd394d927f37f5004bfdcb9}{charge\+Player}} (\mbox{\hyperlink{classplayer}{player}} $\ast$\mbox{\hyperlink{classfield_a52e61f57f292aadd141aecf8745b4605}{player\+On\+Field}}, int sum)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Text $\ast$ \mbox{\hyperlink{classfield_a0fa76e9bb3e439757ad10e5f6032e1ff}{field\+Title}}
+\item 
+sf\+::\+Font \mbox{\hyperlink{classfield_a1aff76778baa8007044831e512a5cd8e}{font}}
+\item 
+sf\+::\+Color \mbox{\hyperlink{classfield_ae869b5c6466855de5bb00a0da4a738e4}{color}}
+\item 
+sf\+::\+Rectangle\+Shape $\ast$ \mbox{\hyperlink{classfield_a457df0c383be6b883d441c4501d5b985}{title\+Bar}}
+\item 
+\mbox{\hyperlink{classplayer}{player}} $\ast$ \mbox{\hyperlink{classfield_a52e61f57f292aadd141aecf8745b4605}{player\+On\+Field}}
+\item 
+int \mbox{\hyperlink{classfield_ad87fbe2da895412c846878e41e673650}{cnt}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa abstrakcyjna pól na planszy. Ka¿de pole ma unikaln¹ definicjê czysto wirtualnej metody \mbox{\hyperlink{classfield_a940f9ab5e5a33ce71f77c88c5b312300}{on\+Step\+Action()}}. 
+
+Definition at line 6 of file field.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfield_a35665d2e0c29e9125ae8ad082600254a}\label{classfield_a35665d2e0c29e9125ae8ad082600254a}} 
+\index{field@{field}!field@{field}}
+\index{field@{field}!field@{field}}
+\subsubsection{\texorpdfstring{field()}{field()}}
+{\footnotesize\ttfamily field\+::field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Tworzy nowy obiekt pola z czcionk¹ z lokalizacji /fonts. Skaluje czcionkê odpowiedni do rozmiaru planszy. Domyœlnie nie dopuszcza mo¿liwoœci tekstury.
+
+Definition at line 6 of file field.\+cpp.
+
+\mbox{\Hypertarget{classfield_a600cf76c8c366764a8e0e6a48e43d0fd}\label{classfield_a600cf76c8c366764a8e0e6a48e43d0fd}} 
+\index{field@{field}!````~field@{$\sim$field}}
+\index{````~field@{$\sim$field}!field@{field}}
+\subsubsection{\texorpdfstring{$\sim$field()}{~field()}}
+{\footnotesize\ttfamily field\+::$\sim$field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 23 of file field.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfield_a9f906f786bd394d927f37f5004bfdcb9}\label{classfield_a9f906f786bd394d927f37f5004bfdcb9}} 
+\index{field@{field}!charge\+Player@{charge\+Player}}
+\index{charge\+Player@{charge\+Player}!field@{field}}
+\subsubsection{\texorpdfstring{charge\+Player()}{chargePlayer()}}
+{\footnotesize\ttfamily void field\+::charge\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classplayer}{player}} $\ast$}]{player\+On\+Field,  }\item[{int}]{sum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+~\newline
+Zabiera z portfela gracza zadan¹ sumê.
+
+Definition at line 114 of file field.\+cpp.
+
+\mbox{\Hypertarget{classfield_a4f68652f2eecabec8db421ac426e77b5}\label{classfield_a4f68652f2eecabec8db421ac426e77b5}} 
+\index{field@{field}!create\+And\+Set\+Title\+Bar@{create\+And\+Set\+Title\+Bar}}
+\index{create\+And\+Set\+Title\+Bar@{create\+And\+Set\+Title\+Bar}!field@{field}}
+\subsubsection{\texorpdfstring{create\+And\+Set\+Title\+Bar()}{createAndSetTitleBar()}}
+{\footnotesize\ttfamily void field\+::create\+And\+Set\+Title\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+~\newline
+Tworzy belkê tytu³u pola.
+
+Definition at line 30 of file field.\+cpp.
+
+\mbox{\Hypertarget{classfield_a7346dd19ca40aff0739451ed99cda6cb}\label{classfield_a7346dd19ca40aff0739451ed99cda6cb}} 
+\index{field@{field}!get\+Token\+Slot@{get\+Token\+Slot}}
+\index{get\+Token\+Slot@{get\+Token\+Slot}!field@{field}}
+\subsubsection{\texorpdfstring{get\+Token\+Slot()}{getTokenSlot()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f field\+::get\+Token\+Slot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+Pozwala na pobranie niezajêtej pozycji slotu.
+
+Definition at line 175 of file field.\+cpp.
+
+\mbox{\Hypertarget{classfield_a4a30d7fe2bdc0084b4b9a5f102c31e39}\label{classfield_a4a30d7fe2bdc0084b4b9a5f102c31e39}} 
+\index{field@{field}!init\+Token\+Slots@{init\+Token\+Slots}}
+\index{init\+Token\+Slots@{init\+Token\+Slots}!field@{field}}
+\subsubsection{\texorpdfstring{init\+Token\+Slots()}{initTokenSlots()}}
+{\footnotesize\ttfamily void field\+::init\+Token\+Slots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+Inicjalizuje sloty dla tokenów na danym polu, aby nie renderowa³y siê w tym samym miejscu.
+
+Definition at line 123 of file field.\+cpp.
+
+\mbox{\Hypertarget{classfield_a940f9ab5e5a33ce71f77c88c5b312300}\label{classfield_a940f9ab5e5a33ce71f77c88c5b312300}} 
+\index{field@{field}!on\+Step\+Action@{on\+Step\+Action}}
+\index{on\+Step\+Action@{on\+Step\+Action}!field@{field}}
+\subsubsection{\texorpdfstring{on\+Step\+Action()}{onStepAction()}}
+{\footnotesize\ttfamily virtual void field\+::on\+Step\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classplayer}{player}} $\ast$}]{player\+On\+Field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classproperty_field_a6d2773b5e1cdd56d496bf0fa81acff2c}{property\+Field}}, and \mbox{\hyperlink{classtrap_field_ad62f38751ec76b88bf7cde74ee191638}{trap\+Field}}.
+
+\mbox{\Hypertarget{classfield_a3b2cdb0e289aa1b47ce79360b975f6a9}\label{classfield_a3b2cdb0e289aa1b47ce79360b975f6a9}} 
+\index{field@{field}!render@{render}}
+\index{render@{render}!field@{field}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void field\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classentity_a5b083ead5c77ab929809c662d71f37f6}{entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classproperty_field_ada6c23589e09fe31f88b75ed2ec27d11}{property\+Field}}.
+
+
+
+Definition at line 147 of file field.\+cpp.
+
+\mbox{\Hypertarget{classfield_a9341d5cedf072190186199f9abea728f}\label{classfield_a9341d5cedf072190186199f9abea728f}} 
+\index{field@{field}!set\+Field\+Text@{set\+Field\+Text}}
+\index{set\+Field\+Text@{set\+Field\+Text}!field@{field}}
+\subsubsection{\texorpdfstring{set\+Field\+Text()}{setFieldText()}}
+{\footnotesize\ttfamily void field\+::set\+Field\+Text (\begin{DoxyParamCaption}\item[{sf\+::\+Text $\ast$}]{field\+Text,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{int}]{rotation,  }\item[{sf\+::\+Font}]{font,  }\item[{int}]{font\+Size,  }\item[{sf\+::\+Color}]{color,  }\item[{std\+::string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+~\newline
+Ustawia tekst pola w zale¿noœci od aktualnej rotacji, pozycji.
+
+Definition at line 56 of file field.\+cpp.
+
+\mbox{\Hypertarget{classfield_a526cc088056de1c0efdcf55fe1062e78}\label{classfield_a526cc088056de1c0efdcf55fe1062e78}} 
+\index{field@{field}!update@{update}}
+\index{update@{update}!field@{field}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void field\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classproperty_field_a32b21dcaf062135f50a674da30c707c9}{property\+Field}}.
+
+
+
+Definition at line 166 of file field.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classfield_ad87fbe2da895412c846878e41e673650}\label{classfield_ad87fbe2da895412c846878e41e673650}} 
+\index{field@{field}!cnt@{cnt}}
+\index{cnt@{cnt}!field@{field}}
+\subsubsection{\texorpdfstring{cnt}{cnt}}
+{\footnotesize\ttfamily int field\+::cnt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file field.\+h.
+
+\mbox{\Hypertarget{classfield_ae869b5c6466855de5bb00a0da4a738e4}\label{classfield_ae869b5c6466855de5bb00a0da4a738e4}} 
+\index{field@{field}!color@{color}}
+\index{color@{color}!field@{field}}
+\subsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily sf\+::\+Color field\+::color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 22 of file field.\+h.
+
+\mbox{\Hypertarget{classfield_aa1ee6124b7b2c31a8cf5b72b2a1e378e}\label{classfield_aa1ee6124b7b2c31a8cf5b72b2a1e378e}} 
+\index{field@{field}!field\+Description@{field\+Description}}
+\index{field\+Description@{field\+Description}!field@{field}}
+\subsubsection{\texorpdfstring{field\+Description}{fieldDescription}}
+{\footnotesize\ttfamily sf\+::\+Text field\+::field\+Description}
+
+
+
+Definition at line 41 of file field.\+h.
+
+\mbox{\Hypertarget{classfield_a0fa76e9bb3e439757ad10e5f6032e1ff}\label{classfield_a0fa76e9bb3e439757ad10e5f6032e1ff}} 
+\index{field@{field}!field\+Title@{field\+Title}}
+\index{field\+Title@{field\+Title}!field@{field}}
+\subsubsection{\texorpdfstring{field\+Title}{fieldTitle}}
+{\footnotesize\ttfamily sf\+::\+Text$\ast$ field\+::field\+Title\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 20 of file field.\+h.
+
+\mbox{\Hypertarget{classfield_ab03c33568f190a5c3ca4d33b4cd778ba}\label{classfield_ab03c33568f190a5c3ca4d33b4cd778ba}} 
+\index{field@{field}!field\+Type@{field\+Type}}
+\index{field\+Type@{field\+Type}!field@{field}}
+\subsubsection{\texorpdfstring{field\+Type}{fieldType}}
+{\footnotesize\ttfamily sf\+::\+Text field\+::field\+Type}
+
+
+
+Definition at line 40 of file field.\+h.
+
+\mbox{\Hypertarget{classfield_a1aff76778baa8007044831e512a5cd8e}\label{classfield_a1aff76778baa8007044831e512a5cd8e}} 
+\index{field@{field}!font@{font}}
+\index{font@{font}!field@{field}}
+\subsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font field\+::font\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 21 of file field.\+h.
+
+\mbox{\Hypertarget{classfield_ac829935acd985295259828967292eb91}\label{classfield_ac829935acd985295259828967292eb91}} 
+\index{field@{field}!ID@{ID}}
+\index{ID@{ID}!field@{field}}
+\subsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily unsigned int field\+::\+ID}
+
+
+
+Definition at line 38 of file field.\+h.
+
+\mbox{\Hypertarget{classfield_a52e61f57f292aadd141aecf8745b4605}\label{classfield_a52e61f57f292aadd141aecf8745b4605}} 
+\index{field@{field}!player\+On\+Field@{player\+On\+Field}}
+\index{player\+On\+Field@{player\+On\+Field}!field@{field}}
+\subsubsection{\texorpdfstring{player\+On\+Field}{playerOnField}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classplayer}{player}}$\ast$ field\+::player\+On\+Field\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file field.\+h.
+
+\mbox{\Hypertarget{classfield_a457df0c383be6b883d441c4501d5b985}\label{classfield_a457df0c383be6b883d441c4501d5b985}} 
+\index{field@{field}!title\+Bar@{title\+Bar}}
+\index{title\+Bar@{title\+Bar}!field@{field}}
+\subsubsection{\texorpdfstring{title\+Bar}{titleBar}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape$\ast$ field\+::title\+Bar\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file field.\+h.
+
+\mbox{\Hypertarget{classfield_a728e63bc476730a19d24e0b9e51da371}\label{classfield_a728e63bc476730a19d24e0b9e51da371}} 
+\index{field@{field}!token\+Slots@{token\+Slots}}
+\index{token\+Slots@{token\+Slots}!field@{field}}
+\subsubsection{\texorpdfstring{token\+Slots}{tokenSlots}}
+{\footnotesize\ttfamily std\+::map$<$int, sf\+::\+Vector2f$>$ field\+::token\+Slots}
+
+
+
+Definition at line 39 of file field.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{field_8h}{field.\+h}}\item 
+\mbox{\hyperlink{field_8cpp}{field.\+cpp}}\end{DoxyCompactItemize}

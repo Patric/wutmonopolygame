@@ -20,6 +20,10 @@ propertyField::propertyField(
 {
 	//Initiating variables
 	//this->initVariables();
+
+		/*!
+* Tworzy pole w danym miejscu z domyœlnymi parametrami. 
+	*/
 	this->currentUpgradeLevel = 0;
 	this->numOfUpgrades = 6;
 	this->owner = NULL;
@@ -100,6 +104,9 @@ void propertyField::update(const float& dt, sf::Vector2f mousePos)
 
 void propertyField::updateMenu(const float& dt, sf::Vector2f mousePos)
 {
+	/*!
+* Aktualizuje stan menu dla danego pola. Usuwa menu w momencie wciœniêcia przycisku Leave. Ustawia w³aœciciela w momencie wciœniêcia "Buy".
+	*/
 	this->menu->update(mousePos, dt);
 
 	for (auto i: this->menu->buttons) 
@@ -158,7 +165,9 @@ void propertyField::updateMenu(const float& dt, sf::Vector2f mousePos)
 
 void propertyField::onStepAction(player* playerOnField)
 {
-
+	/*!
+* W zale¿noœci od tego, czy gracz jest w³aœcicielem, potencjalnym nabywc¹, czy klientem przeprowadza ró¿ne akcje.
+	*/
 	this->playerOnField = playerOnField;
 
 	if (playerOnField == this->owner)
@@ -186,7 +195,9 @@ void propertyField::onStepAction(player* playerOnField)
 
 void propertyField::showOwnersMenu() 
 {
-	
+	/*!
+* Wyœwietla opcje w³aœciciela.
+	*/
 
 	this->menu = new gui::menu(
 		1700,
@@ -200,7 +211,9 @@ void propertyField::showOwnersMenu()
 
 void propertyField::showBuyersMenu()
 {
-
+	/*!
+* Wyœwietla opcje kupowania.
+	*/
 	this->menu = new gui::menu(
 		1700,
 		500,
@@ -214,6 +227,9 @@ void propertyField::showBuyersMenu()
 
 void propertyField::buyField(player* newOwner)
 {
+	/*!
+* Zmienia w³aœciciela niezakupionego pola i pobiera op³atê.
+	*/
 	this->owner = newOwner;
 	this->chargePlayer(this->owner, this->price);
 }
@@ -223,7 +239,10 @@ void propertyField::buyField(player* newOwner)
 //Render
 
 void propertyField::render(sf::RenderTarget* target)
-{	
+{		/*!
+* Jeœli istnieje menu to renderuje menu i pole. Jeœli nie to tylko pole.
+	*/
+
 	//Calling base class method
 	this->field::render(target);
 	if (this->menu) 

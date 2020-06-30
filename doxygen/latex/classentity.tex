@@ -1,0 +1,265 @@
+\hypertarget{classentity}{}\section{entity Class Reference}
+\label{classentity}\index{entity@{entity}}
+
+
+{\ttfamily \#include $<$entity.\+h$>$}
+
+Inheritance diagram for entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classentity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentity_ac20edb72e9e89b902bf14b68773c1697}{entity}} ()
+\item 
+virtual \mbox{\hyperlink{classentity_acec2b315e0eddb40f6c2dc1a7688293e}{$\sim$entity}} ()
+\item 
+void \mbox{\hyperlink{classentity_ae1b6f11cf4d1a47d9c41d45c33ee24c1}{create\+Sprite}} (sf\+::\+Texture $\ast$\mbox{\hyperlink{classentity_aeb2014309ee421c4185f64f8cb6f6b30}{texture}})
+\item 
+void \mbox{\hyperlink{classentity_ad9b68be56e131ee899fa246ea542f96f}{create\+Rect}} (float width, float height, sf\+::\+Color color, bool origin\+In\+Center)
+\item 
+void \mbox{\hyperlink{classentity_ab3d4b23d67cad72fe9b8192666b188be}{set\+Origin\+In\+Center}} ()
+\item 
+virtual void \mbox{\hyperlink{classentity_a1ff6bad3b872130413e664fa14965b1b}{set\+Position}} (const float x, const float y)
+\item 
+virtual void \mbox{\hyperlink{classentity_a9fb61b5564720c7e61d55c312b0448c8}{move}} (const float \&dt, const float dir\+\_\+x, const float dir\+\_\+y)
+\item 
+virtual void \mbox{\hyperlink{classentity_a155484fa64039b2e359cc2a99a6f09f5}{update}} (const float \&dt)
+\item 
+virtual void \mbox{\hyperlink{classentity_a5b083ead5c77ab929809c662d71f37f6}{render}} (sf\+::\+Render\+Target $\ast$target)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite $\ast$ \mbox{\hyperlink{classentity_a14af3c2af6f81ed514bf0398579049ba}{sprite}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classentity_a35315b580fda3763cfeb87b6dec77879}{scale\+Fonts}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Texture $\ast$ \mbox{\hyperlink{classentity_aeb2014309ee421c4185f64f8cb6f6b30}{texture}}
+\item 
+sf\+::\+Font \mbox{\hyperlink{classentity_ace4c257849221c29427f2abfbcb35074}{font}}
+\item 
+sf\+::\+Rectangle\+Shape $\ast$ \mbox{\hyperlink{classentity_af5e82b825396fabe621e707ca670b011}{default\+Shape}}
+\item 
+std\+::map$<$ unsigned short, int $>$ \mbox{\hyperlink{classentity_a2b2741d5d3818e5d6d8c583dc92d2a14}{font\+Size}}
+\item 
+bool \mbox{\hyperlink{classentity_ab82c76511fa953eb60ba08419317bbaa}{load\+Texture}}
+\item 
+float \mbox{\hyperlink{classentity_a446075bd01281cbb7be7ec8bf69fc2e2}{movement\+Speed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa abstrakcyjna okreœlaj¹ca ka¿dy element znajduj¹cy siê na planszy, maj¹cy graficzne przedstawienie. 
+
+Definition at line 20 of file entity.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classentity_ac20edb72e9e89b902bf14b68773c1697}\label{classentity_ac20edb72e9e89b902bf14b68773c1697}} 
+\index{entity@{entity}!entity@{entity}}
+\index{entity@{entity}!entity@{entity}}
+\subsubsection{\texorpdfstring{entity()}{entity()}}
+{\footnotesize\ttfamily entity\+::entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file entity.\+cpp.
+
+\mbox{\Hypertarget{classentity_acec2b315e0eddb40f6c2dc1a7688293e}\label{classentity_acec2b315e0eddb40f6c2dc1a7688293e}} 
+\index{entity@{entity}!````~entity@{$\sim$entity}}
+\index{````~entity@{$\sim$entity}!entity@{entity}}
+\subsubsection{\texorpdfstring{$\sim$entity()}{~entity()}}
+{\footnotesize\ttfamily entity\+::$\sim$entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 42 of file entity.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classentity_ad9b68be56e131ee899fa246ea542f96f}\label{classentity_ad9b68be56e131ee899fa246ea542f96f}} 
+\index{entity@{entity}!create\+Rect@{create\+Rect}}
+\index{create\+Rect@{create\+Rect}!entity@{entity}}
+\subsubsection{\texorpdfstring{create\+Rect()}{createRect()}}
+{\footnotesize\ttfamily void entity\+::create\+Rect (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height,  }\item[{sf\+::\+Color}]{color,  }\item[{bool}]{origin\+In\+Center }\end{DoxyParamCaption})}
+
+~\newline
+Tworzy prostok¹t, maj¹c dane parametry. Pozwala na umieszczenie uchwytu w œrodku za pomoc¹ origin\+In\+Center.
+
+Definition at line 62 of file entity.\+cpp.
+
+\mbox{\Hypertarget{classentity_ae1b6f11cf4d1a47d9c41d45c33ee24c1}\label{classentity_ae1b6f11cf4d1a47d9c41d45c33ee24c1}} 
+\index{entity@{entity}!create\+Sprite@{create\+Sprite}}
+\index{create\+Sprite@{create\+Sprite}!entity@{entity}}
+\subsubsection{\texorpdfstring{create\+Sprite()}{createSprite()}}
+{\footnotesize\ttfamily void entity\+::create\+Sprite (\begin{DoxyParamCaption}\item[{sf\+::\+Texture $\ast$}]{texture }\end{DoxyParamCaption})}
+
+~\newline
+Pozwala na u¿ycie tekstury.
+
+Definition at line 51 of file entity.\+cpp.
+
+\mbox{\Hypertarget{classentity_a9fb61b5564720c7e61d55c312b0448c8}\label{classentity_a9fb61b5564720c7e61d55c312b0448c8}} 
+\index{entity@{entity}!move@{move}}
+\index{move@{move}!entity@{entity}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void entity\+::move (\begin{DoxyParamCaption}\item[{const float \&}]{dt,  }\item[{const float}]{dir\+\_\+x,  }\item[{const float}]{dir\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+I\+Pozwala na poruszenie obiektu z zadan¹ prêdkoœci¹.
+
+Definition at line 111 of file entity.\+cpp.
+
+\mbox{\Hypertarget{classentity_a5b083ead5c77ab929809c662d71f37f6}\label{classentity_a5b083ead5c77ab929809c662d71f37f6}} 
+\index{entity@{entity}!render@{render}}
+\index{render@{render}!entity@{entity}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void entity\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+Rysuje entity. Jeœli dodana zosta³a tekstura to rysuje teksturê, w przeciwnym razie rysuje default\+Shape, czyli domyœlny kszta³t bêd¹cy prostok¹tem.
+
+Reimplemented in \mbox{\hyperlink{classproperty_field_ada6c23589e09fe31f88b75ed2ec27d11}{property\+Field}}, \mbox{\hyperlink{classboard_a092056b291f6ff6cb438903a5e416ecb}{board}}, \mbox{\hyperlink{classturn_a6a72d11a8e3d8272c6b8d1ddd66331c2}{turn}}, and \mbox{\hyperlink{classfield_a3b2cdb0e289aa1b47ce79360b975f6a9}{field}}.
+
+
+
+Definition at line 128 of file entity.\+cpp.
+
+\mbox{\Hypertarget{classentity_a35315b580fda3763cfeb87b6dec77879}\label{classentity_a35315b580fda3763cfeb87b6dec77879}} 
+\index{entity@{entity}!scale\+Fonts@{scale\+Fonts}}
+\index{scale\+Fonts@{scale\+Fonts}!entity@{entity}}
+\subsubsection{\texorpdfstring{scale\+Fonts()}{scaleFonts()}}
+{\footnotesize\ttfamily void entity\+::scale\+Fonts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+~\newline
+Skaluje czcionkê w zale¿noœci od wielkoœci elementu.
+
+Definition at line 23 of file entity.\+cpp.
+
+\mbox{\Hypertarget{classentity_ab3d4b23d67cad72fe9b8192666b188be}\label{classentity_ab3d4b23d67cad72fe9b8192666b188be}} 
+\index{entity@{entity}!set\+Origin\+In\+Center@{set\+Origin\+In\+Center}}
+\index{set\+Origin\+In\+Center@{set\+Origin\+In\+Center}!entity@{entity}}
+\subsubsection{\texorpdfstring{set\+Origin\+In\+Center()}{setOriginInCenter()}}
+{\footnotesize\ttfamily void entity\+::set\+Origin\+In\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Umieszcza uchwyt obiektu w œrodku ciê¿koœci.
+
+Definition at line 98 of file entity.\+cpp.
+
+\mbox{\Hypertarget{classentity_a1ff6bad3b872130413e664fa14965b1b}\label{classentity_a1ff6bad3b872130413e664fa14965b1b}} 
+\index{entity@{entity}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!entity@{entity}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void entity\+::set\+Position (\begin{DoxyParamCaption}\item[{const float}]{x,  }\item[{const float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+~\newline
+Ustawia pozycjê elementu.
+
+Definition at line 80 of file entity.\+cpp.
+
+\mbox{\Hypertarget{classentity_a155484fa64039b2e359cc2a99a6f09f5}\label{classentity_a155484fa64039b2e359cc2a99a6f09f5}} 
+\index{entity@{entity}!update@{update}}
+\index{update@{update}!entity@{entity}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void entity\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classtoken_aafed3b67f7f8466510d6bd4e93413e15}{token}}.
+
+
+
+Definition at line 123 of file entity.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classentity_af5e82b825396fabe621e707ca670b011}\label{classentity_af5e82b825396fabe621e707ca670b011}} 
+\index{entity@{entity}!default\+Shape@{default\+Shape}}
+\index{default\+Shape@{default\+Shape}!entity@{entity}}
+\subsubsection{\texorpdfstring{default\+Shape}{defaultShape}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape$\ast$ entity\+::default\+Shape\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file entity.\+h.
+
+\mbox{\Hypertarget{classentity_ace4c257849221c29427f2abfbcb35074}\label{classentity_ace4c257849221c29427f2abfbcb35074}} 
+\index{entity@{entity}!font@{font}}
+\index{font@{font}!entity@{entity}}
+\subsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font entity\+::font\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file entity.\+h.
+
+\mbox{\Hypertarget{classentity_a2b2741d5d3818e5d6d8c583dc92d2a14}\label{classentity_a2b2741d5d3818e5d6d8c583dc92d2a14}} 
+\index{entity@{entity}!font\+Size@{font\+Size}}
+\index{font\+Size@{font\+Size}!entity@{entity}}
+\subsubsection{\texorpdfstring{font\+Size}{fontSize}}
+{\footnotesize\ttfamily std\+::map$<$unsigned short, int$>$ entity\+::font\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file entity.\+h.
+
+\mbox{\Hypertarget{classentity_ab82c76511fa953eb60ba08419317bbaa}\label{classentity_ab82c76511fa953eb60ba08419317bbaa}} 
+\index{entity@{entity}!load\+Texture@{load\+Texture}}
+\index{load\+Texture@{load\+Texture}!entity@{entity}}
+\subsubsection{\texorpdfstring{load\+Texture}{loadTexture}}
+{\footnotesize\ttfamily bool entity\+::load\+Texture\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file entity.\+h.
+
+\mbox{\Hypertarget{classentity_a446075bd01281cbb7be7ec8bf69fc2e2}\label{classentity_a446075bd01281cbb7be7ec8bf69fc2e2}} 
+\index{entity@{entity}!movement\+Speed@{movement\+Speed}}
+\index{movement\+Speed@{movement\+Speed}!entity@{entity}}
+\subsubsection{\texorpdfstring{movement\+Speed}{movementSpeed}}
+{\footnotesize\ttfamily float entity\+::movement\+Speed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file entity.\+h.
+
+\mbox{\Hypertarget{classentity_a14af3c2af6f81ed514bf0398579049ba}\label{classentity_a14af3c2af6f81ed514bf0398579049ba}} 
+\index{entity@{entity}!sprite@{sprite}}
+\index{sprite@{sprite}!entity@{entity}}
+\subsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite$\ast$ entity\+::sprite}
+
+
+
+Definition at line 51 of file entity.\+h.
+
+\mbox{\Hypertarget{classentity_aeb2014309ee421c4185f64f8cb6f6b30}\label{classentity_aeb2014309ee421c4185f64f8cb6f6b30}} 
+\index{entity@{entity}!texture@{texture}}
+\index{texture@{texture}!entity@{entity}}
+\subsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily sf\+::\+Texture$\ast$ entity\+::texture\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 38 of file entity.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{entity_8h}{entity.\+h}}\item 
+\mbox{\hyperlink{entity_8cpp}{entity.\+cpp}}\end{DoxyCompactItemize}

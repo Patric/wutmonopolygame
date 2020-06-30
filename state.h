@@ -18,7 +18,11 @@
 
 //main menu state, different textures, managing resources and memory
 class state
+	/*!
+* Abstrakcyjna klasa stanu. Pozwala na tworzenie nowych ekranów takich jak menu, stan gry, które s¹ nowymi stanami.
+	*/
 {
+	
 
 private:
 

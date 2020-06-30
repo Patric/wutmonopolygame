@@ -1,0 +1,144 @@
+\hypertarget{classplayer}{}\section{player Class Reference}
+\label{classplayer}\index{player@{player}}
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplayer_acd3dc158a3e79bf4a53737323239dbd2}{player}} (sf\+::\+Ip\+Address local\+Ip\+Address, int \mbox{\hyperlink{classplayer_a63aaa8d2259e82820437e7989f966dd3}{player\+Id}}, sf\+::\+Color \mbox{\hyperlink{classplayer_afc452b555289777d87cd6d8e18788a93}{color}})
+\item 
+virtual \mbox{\hyperlink{classplayer_aab5d2e47b80e0481f09ca0df8b823057}{$\sim$player}} ()
+\item 
+void \mbox{\hyperlink{classplayer_a201ead0a0d511b9d3d8ea02e6dc0f17a}{create\+Token}} (float x, float y, sf\+::\+Texture $\ast$texture)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtoken}{token}} $\ast$ \mbox{\hyperlink{classplayer_a209149cf07fc9d2d04c98cc76034c69c}{player\+Token}}
+\item 
+int \mbox{\hyperlink{classplayer_a63aaa8d2259e82820437e7989f966dd3}{player\+Id}}
+\item 
+sf\+::\+Text \mbox{\hyperlink{classplayer_a90eea2e10a265252541f3caeb14271eb}{nickname}}
+\item 
+sf\+::\+Color \mbox{\hyperlink{classplayer_afc452b555289777d87cd6d8e18788a93}{color}}
+\item 
+sf\+::\+Int64 \mbox{\hyperlink{classplayer_ab723751a3c9192f5f24c97b83acdc6b7}{last\+Dice}}
+\item 
+int \mbox{\hyperlink{classplayer_a1dc2aa9baa96712cce9f13cd63ceb812}{wallet}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa gracza. W domyœle ma zawieraæ nickname gracza, jego adres ip, który ma slu¿yæ komunikacji w sieci lokalnej. Zawiera tak¿e token gracza, jego stan konta oraz ostatni¹ iloœæ wyrzuconych oczek. 
+
+Definition at line 6 of file player.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classplayer_acd3dc158a3e79bf4a53737323239dbd2}\label{classplayer_acd3dc158a3e79bf4a53737323239dbd2}} 
+\index{player@{player}!player@{player}}
+\index{player@{player}!player@{player}}
+\subsubsection{\texorpdfstring{player()}{player()}}
+{\footnotesize\ttfamily player\+::player (\begin{DoxyParamCaption}\item[{sf\+::\+Ip\+Address}]{local\+Ip\+Address,  }\item[{int}]{player\+Id,  }\item[{sf\+::\+Color}]{color }\end{DoxyParamCaption})}
+
+~\newline
+Tworzy nowego gracza z zadanym id, adresep ip, a tak¿e przydzielonym mu kolorem.
+
+Definition at line 3 of file player.\+cpp.
+
+\mbox{\Hypertarget{classplayer_aab5d2e47b80e0481f09ca0df8b823057}\label{classplayer_aab5d2e47b80e0481f09ca0df8b823057}} 
+\index{player@{player}!````~player@{$\sim$player}}
+\index{````~player@{$\sim$player}!player@{player}}
+\subsubsection{\texorpdfstring{$\sim$player()}{~player()}}
+{\footnotesize\ttfamily player\+::$\sim$player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 16 of file player.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classplayer_a201ead0a0d511b9d3d8ea02e6dc0f17a}\label{classplayer_a201ead0a0d511b9d3d8ea02e6dc0f17a}} 
+\index{player@{player}!create\+Token@{create\+Token}}
+\index{create\+Token@{create\+Token}!player@{player}}
+\subsubsection{\texorpdfstring{create\+Token()}{createToken()}}
+{\footnotesize\ttfamily void player\+::create\+Token (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{sf\+::\+Texture $\ast$}]{texture }\end{DoxyParamCaption})}
+
+~\newline
+Tworzy token dla gracza w okreœlonym miejscu.
+
+Definition at line 22 of file player.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classplayer_afc452b555289777d87cd6d8e18788a93}\label{classplayer_afc452b555289777d87cd6d8e18788a93}} 
+\index{player@{player}!color@{color}}
+\index{color@{color}!player@{player}}
+\subsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily sf\+::\+Color player\+::color}
+
+
+
+Definition at line 20 of file player.\+h.
+
+\mbox{\Hypertarget{classplayer_ab723751a3c9192f5f24c97b83acdc6b7}\label{classplayer_ab723751a3c9192f5f24c97b83acdc6b7}} 
+\index{player@{player}!last\+Dice@{last\+Dice}}
+\index{last\+Dice@{last\+Dice}!player@{player}}
+\subsubsection{\texorpdfstring{last\+Dice}{lastDice}}
+{\footnotesize\ttfamily sf\+::\+Int64 player\+::last\+Dice}
+
+
+
+Definition at line 21 of file player.\+h.
+
+\mbox{\Hypertarget{classplayer_a90eea2e10a265252541f3caeb14271eb}\label{classplayer_a90eea2e10a265252541f3caeb14271eb}} 
+\index{player@{player}!nickname@{nickname}}
+\index{nickname@{nickname}!player@{player}}
+\subsubsection{\texorpdfstring{nickname}{nickname}}
+{\footnotesize\ttfamily sf\+::\+Text player\+::nickname}
+
+
+
+Definition at line 19 of file player.\+h.
+
+\mbox{\Hypertarget{classplayer_a63aaa8d2259e82820437e7989f966dd3}\label{classplayer_a63aaa8d2259e82820437e7989f966dd3}} 
+\index{player@{player}!player\+Id@{player\+Id}}
+\index{player\+Id@{player\+Id}!player@{player}}
+\subsubsection{\texorpdfstring{player\+Id}{playerId}}
+{\footnotesize\ttfamily int player\+::player\+Id}
+
+
+
+Definition at line 18 of file player.\+h.
+
+\mbox{\Hypertarget{classplayer_a209149cf07fc9d2d04c98cc76034c69c}\label{classplayer_a209149cf07fc9d2d04c98cc76034c69c}} 
+\index{player@{player}!player\+Token@{player\+Token}}
+\index{player\+Token@{player\+Token}!player@{player}}
+\subsubsection{\texorpdfstring{player\+Token}{playerToken}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtoken}{token}}$\ast$ player\+::player\+Token}
+
+
+
+Definition at line 17 of file player.\+h.
+
+\mbox{\Hypertarget{classplayer_a1dc2aa9baa96712cce9f13cd63ceb812}\label{classplayer_a1dc2aa9baa96712cce9f13cd63ceb812}} 
+\index{player@{player}!wallet@{wallet}}
+\index{wallet@{wallet}!player@{player}}
+\subsubsection{\texorpdfstring{wallet}{wallet}}
+{\footnotesize\ttfamily int player\+::wallet}
+
+
+
+Definition at line 22 of file player.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{player_8h}{player.\+h}}\item 
+\mbox{\hyperlink{player_8cpp}{player.\+cpp}}\end{DoxyCompactItemize}

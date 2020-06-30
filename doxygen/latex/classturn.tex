@@ -1,0 +1,255 @@
+\hypertarget{classturn}{}\section{turn Class Reference}
+\label{classturn}\index{turn@{turn}}
+
+
+{\ttfamily \#include $<$turn.\+h$>$}
+
+Inheritance diagram for turn\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classturn}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classturn_a6828c9caa97f36f8a4af8561511284f6}{turn}} (float x, float y, std\+::vector$<$ \mbox{\hyperlink{classplayer}{player}} $\ast$$>$ $\ast$players, std\+::vector$<$ \mbox{\hyperlink{classfield}{field}} $\ast$$>$ $\ast$fields)
+\item 
+virtual \mbox{\hyperlink{classturn_a9efd1e1ee9071b8a801efbb38f45dee1}{$\sim$turn}} ()
+\item 
+void \mbox{\hyperlink{classturn_a1753fbede73daa717c037e47eb8c86a1}{pass\+Turn}} ()
+\item 
+void \mbox{\hyperlink{classturn_a0e4da0dd97f0b1f5b81f786538b53cd6}{set\+Queue}} ()
+\item 
+void \mbox{\hyperlink{classturn_a4c1afc2c2e7711a100c5aa4c06babf2a}{update\+Your\+Turn}} (const float \&dt, sf\+::\+Vector2f mouse\+Pos)
+\item 
+void \mbox{\hyperlink{classturn_aa0947dcb165c2dc20131dcab556b9136}{wait\+For\+Turn}} ()
+\item 
+void \mbox{\hyperlink{classturn_a7ca9363b736aec69027316d35984ccde}{update\+Buttons}} (sf\+::\+Vector2f mouse\+Pos\+View, const float \&dt)
+\item 
+void \mbox{\hyperlink{classturn_a3fb807ea6aa45cdda7c93bb5d94435b1}{render\+Buttons}} (sf\+::\+Render\+Target $\ast$target)
+\item 
+void \mbox{\hyperlink{classturn_ae1c77b917de5baeb6a4df1be43e9c257}{render\+Turn\+Info}} (sf\+::\+Render\+Target $\ast$target)
+\item 
+void \mbox{\hyperlink{classturn_a9c139ad9e0b8455e247f0ba7b6506654}{update\+Turn\+Info}} (const float \&dt)
+\item 
+void \mbox{\hyperlink{classturn_a777f9c9ed46cec5eda6032dd47142c35}{render\+Dice}} (sf\+::\+Render\+Target $\ast$target)
+\item 
+void \mbox{\hyperlink{classturn_a3ba6c59bc823bc2cd548e49bcae7bee7}{update\+Dice}} ()
+\item 
+void \mbox{\hyperlink{classturn_a8c4f08e2aaf3cec484c54a96b41f307f}{move\+Token\+To\+ID}} (\mbox{\hyperlink{classtoken}{token}} $\ast$token\+To\+Move, int field\+ID)
+\item 
+void \mbox{\hyperlink{classturn_ad94df8997629f72e4531566d285fa58a}{move\+Token}} (\mbox{\hyperlink{classtoken}{token}} $\ast$token\+To\+Move, int num\+Of\+Fields)
+\item 
+void \mbox{\hyperlink{classturn_a6a72d11a8e3d8272c6b8d1ddd66331c2}{render}} (sf\+::\+Render\+Target $\ast$target)
+\item 
+void \mbox{\hyperlink{classturn_aff6376729f656664d68c0917e37c41f3}{update}} (const float \&dt, sf\+::\+Vector2f mouse\+Pos)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplayer}{player}} $\ast$ \mbox{\hyperlink{classturn_a93c4057955c746212bf09ebfdcb4eeab}{you}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+klasa tury. Zawiera listê graczy oraz kolejkê, a tak¿e wskaŸnik na gracza na jego komputerze. Zawiera najwa¿niejsz¹ czêœæ logiki. 
+
+Definition at line 8 of file turn.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classturn_a6828c9caa97f36f8a4af8561511284f6}\label{classturn_a6828c9caa97f36f8a4af8561511284f6}} 
+\index{turn@{turn}!turn@{turn}}
+\index{turn@{turn}!turn@{turn}}
+\subsubsection{\texorpdfstring{turn()}{turn()}}
+{\footnotesize\ttfamily turn\+::turn (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classplayer}{player}} $\ast$$>$ $\ast$}]{players,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classfield}{field}} $\ast$$>$ $\ast$}]{fields }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a9efd1e1ee9071b8a801efbb38f45dee1}\label{classturn_a9efd1e1ee9071b8a801efbb38f45dee1}} 
+\index{turn@{turn}!````~turn@{$\sim$turn}}
+\index{````~turn@{$\sim$turn}!turn@{turn}}
+\subsubsection{\texorpdfstring{$\sim$turn()}{~turn()}}
+{\footnotesize\ttfamily turn\+::$\sim$turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 18 of file turn.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classturn_ad94df8997629f72e4531566d285fa58a}\label{classturn_ad94df8997629f72e4531566d285fa58a}} 
+\index{turn@{turn}!move\+Token@{move\+Token}}
+\index{move\+Token@{move\+Token}!turn@{turn}}
+\subsubsection{\texorpdfstring{move\+Token()}{moveToken()}}
+{\footnotesize\ttfamily void turn\+::move\+Token (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtoken}{token}} $\ast$}]{token\+To\+Move,  }\item[{int}]{num\+Of\+Fields }\end{DoxyParamCaption})}
+
+~\newline
+Przesuwa token o okreœlon¹ liczbê pól.
+
+Definition at line 261 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a8c4f08e2aaf3cec484c54a96b41f307f}\label{classturn_a8c4f08e2aaf3cec484c54a96b41f307f}} 
+\index{turn@{turn}!move\+Token\+To\+ID@{move\+Token\+To\+ID}}
+\index{move\+Token\+To\+ID@{move\+Token\+To\+ID}!turn@{turn}}
+\subsubsection{\texorpdfstring{move\+Token\+To\+I\+D()}{moveTokenToID()}}
+{\footnotesize\ttfamily void turn\+::move\+Token\+To\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtoken}{token}} $\ast$}]{token\+To\+Move,  }\item[{int}]{field\+ID }\end{DoxyParamCaption})}
+
+~\newline
+Przesuwa token do pola o zadanym ID.
+
+Definition at line 247 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a1753fbede73daa717c037e47eb8c86a1}\label{classturn_a1753fbede73daa717c037e47eb8c86a1}} 
+\index{turn@{turn}!pass\+Turn@{pass\+Turn}}
+\index{pass\+Turn@{pass\+Turn}!turn@{turn}}
+\subsubsection{\texorpdfstring{pass\+Turn()}{passTurn()}}
+{\footnotesize\ttfamily void turn\+::pass\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Przekazuje turê do nastepnego gracza w kolejce.
+
+Definition at line 31 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a6a72d11a8e3d8272c6b8d1ddd66331c2}\label{classturn_a6a72d11a8e3d8272c6b8d1ddd66331c2}} 
+\index{turn@{turn}!render@{render}}
+\index{render@{render}!turn@{turn}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void turn\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classentity_a5b083ead5c77ab929809c662d71f37f6}{entity}}.
+
+
+
+Definition at line 98 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a3fb807ea6aa45cdda7c93bb5d94435b1}\label{classturn_a3fb807ea6aa45cdda7c93bb5d94435b1}} 
+\index{turn@{turn}!render\+Buttons@{render\+Buttons}}
+\index{render\+Buttons@{render\+Buttons}!turn@{turn}}
+\subsubsection{\texorpdfstring{render\+Buttons()}{renderButtons()}}
+{\footnotesize\ttfamily void turn\+::render\+Buttons (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line 201 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a777f9c9ed46cec5eda6032dd47142c35}\label{classturn_a777f9c9ed46cec5eda6032dd47142c35}} 
+\index{turn@{turn}!render\+Dice@{render\+Dice}}
+\index{render\+Dice@{render\+Dice}!turn@{turn}}
+\subsubsection{\texorpdfstring{render\+Dice()}{renderDice()}}
+{\footnotesize\ttfamily void turn\+::render\+Dice (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line 226 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_ae1c77b917de5baeb6a4df1be43e9c257}\label{classturn_ae1c77b917de5baeb6a4df1be43e9c257}} 
+\index{turn@{turn}!render\+Turn\+Info@{render\+Turn\+Info}}
+\index{render\+Turn\+Info@{render\+Turn\+Info}!turn@{turn}}
+\subsubsection{\texorpdfstring{render\+Turn\+Info()}{renderTurnInfo()}}
+{\footnotesize\ttfamily void turn\+::render\+Turn\+Info (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line 213 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a0e4da0dd97f0b1f5b81f786538b53cd6}\label{classturn_a0e4da0dd97f0b1f5b81f786538b53cd6}} 
+\index{turn@{turn}!set\+Queue@{set\+Queue}}
+\index{set\+Queue@{set\+Queue}!turn@{turn}}
+\subsubsection{\texorpdfstring{set\+Queue()}{setQueue()}}
+{\footnotesize\ttfamily void turn\+::set\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Ustala kolejkê graczy.
+
+Definition at line 45 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_aff6376729f656664d68c0917e37c41f3}\label{classturn_aff6376729f656664d68c0917e37c41f3}} 
+\index{turn@{turn}!update@{update}}
+\index{update@{update}!turn@{turn}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void turn\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 114 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a7ca9363b736aec69027316d35984ccde}\label{classturn_a7ca9363b736aec69027316d35984ccde}} 
+\index{turn@{turn}!update\+Buttons@{update\+Buttons}}
+\index{update\+Buttons@{update\+Buttons}!turn@{turn}}
+\subsubsection{\texorpdfstring{update\+Buttons()}{updateButtons()}}
+{\footnotesize\ttfamily void turn\+::update\+Buttons (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{mouse\+Pos\+View,  }\item[{const float \&}]{dt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 164 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a3ba6c59bc823bc2cd548e49bcae7bee7}\label{classturn_a3ba6c59bc823bc2cd548e49bcae7bee7}} 
+\index{turn@{turn}!update\+Dice@{update\+Dice}}
+\index{update\+Dice@{update\+Dice}!turn@{turn}}
+\subsubsection{\texorpdfstring{update\+Dice()}{updateDice()}}
+{\footnotesize\ttfamily void turn\+::update\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Aktualizuje kostkê poprzez losowanie cyfry od 1 do 6.
+
+Definition at line 235 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a9c139ad9e0b8455e247f0ba7b6506654}\label{classturn_a9c139ad9e0b8455e247f0ba7b6506654}} 
+\index{turn@{turn}!update\+Turn\+Info@{update\+Turn\+Info}}
+\index{update\+Turn\+Info@{update\+Turn\+Info}!turn@{turn}}
+\subsubsection{\texorpdfstring{update\+Turn\+Info()}{updateTurnInfo()}}
+{\footnotesize\ttfamily void turn\+::update\+Turn\+Info (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 219 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_a4c1afc2c2e7711a100c5aa4c06babf2a}\label{classturn_a4c1afc2c2e7711a100c5aa4c06babf2a}} 
+\index{turn@{turn}!update\+Your\+Turn@{update\+Your\+Turn}}
+\index{update\+Your\+Turn@{update\+Your\+Turn}!turn@{turn}}
+\subsubsection{\texorpdfstring{update\+Your\+Turn()}{updateYourTurn()}}
+{\footnotesize\ttfamily void turn\+::update\+Your\+Turn (\begin{DoxyParamCaption}\item[{const float \&}]{dt,  }\item[{sf\+::\+Vector2f}]{mouse\+Pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file turn.\+cpp.
+
+\mbox{\Hypertarget{classturn_aa0947dcb165c2dc20131dcab556b9136}\label{classturn_aa0947dcb165c2dc20131dcab556b9136}} 
+\index{turn@{turn}!wait\+For\+Turn@{wait\+For\+Turn}}
+\index{wait\+For\+Turn@{wait\+For\+Turn}!turn@{turn}}
+\subsubsection{\texorpdfstring{wait\+For\+Turn()}{waitForTurn()}}
+{\footnotesize\ttfamily void turn\+::wait\+For\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Odblokowuje przycisk R\+O\+L\+L\+\_\+\+D\+I\+CE, gdy graczy otrzymuje ruch.
+
+Definition at line 84 of file turn.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classturn_a93c4057955c746212bf09ebfdcb4eeab}\label{classturn_a93c4057955c746212bf09ebfdcb4eeab}} 
+\index{turn@{turn}!you@{you}}
+\index{you@{you}!turn@{turn}}
+\subsubsection{\texorpdfstring{you}{you}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classplayer}{player}}$\ast$ turn\+::you}
+
+
+
+Definition at line 32 of file turn.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{turn_8h}{turn.\+h}}\item 
+\mbox{\hyperlink{turn_8cpp}{turn.\+cpp}}\end{DoxyCompactItemize}

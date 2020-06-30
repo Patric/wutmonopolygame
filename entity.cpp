@@ -22,7 +22,9 @@ void entity::initVariables()
 
 void entity::scaleFonts()
 {
-
+	/*!
+* Skaluje czcionkê w zale¿noœci od wielkoœci elementu.
+	*/
 
 
 	fontSize[BIG_FONT] = ceil(this->defaultShape->getSize().y / 12); //scales fonts accordingly to entity
@@ -39,7 +41,7 @@ entity::entity(){
 
 entity::~entity(){
 
-	//we don't delete texture since it's from outside
+
 	delete this->sprite;
 	delete this->defaultShape;
 }
@@ -47,7 +49,10 @@ entity::~entity(){
 
 //Component functions
 void entity::createSprite(sf::Texture* texture)
-{
+{	/*!
+* Pozwala na u¿ycie tekstury.
+	*/
+
 	this->texture = texture;
 	this->sprite = new sf::Sprite(*this->texture);
 
@@ -56,6 +61,9 @@ void entity::createSprite(sf::Texture* texture)
 
 void entity::createRect(float width, float height, sf::Color color, bool originInCenter)
 {
+	/*!
+* Tworzy prostok¹t, maj¹c dane parametry. Pozwala na umieszczenie uchwytu w œrodku za pomoc¹ originInCenter.
+	*/
 	this->defaultShape = new sf::RectangleShape();
 	this->defaultShape->setSize(sf::Vector2f(width, height));
 	if (originInCenter)
@@ -71,6 +79,9 @@ void entity::createRect(float width, float height, sf::Color color, bool originI
 //Methods
 void entity::setPosition(const float x, const float y)
 {
+	/*!
+* Ustawia pozycjê elementu.
+	*/
 
 	if (this->sprite)
 	{
@@ -86,6 +97,9 @@ void entity::setPosition(const float x, const float y)
 
 void entity::setOriginInCenter()
 {
+	/*!
+* Umieszcza uchwyt obiektu w œrodku ciê¿koœci.
+	*/
 	this->defaultShape->setOrigin(
 		this->defaultShape->getLocalBounds().left + this->defaultShape->getLocalBounds().width / 2.0f,
 		this->defaultShape->getLocalBounds().top + this->defaultShape->getLocalBounds().height / 2.0f);
@@ -96,6 +110,9 @@ void entity::setOriginInCenter()
 
 void entity::move(const float& dt, const float dir_x, const float dir_y)
 {
+	/*!
+* IPozwala na poruszenie obiektu z zadan¹ prêdkoœci¹.
+	*/
 	if (this->sprite)
 	{
 		this->sprite->move(dir_x * this->movementSpeed * dt, dir_y * this->movementSpeed * dt);
@@ -104,13 +121,15 @@ void entity::move(const float& dt, const float dir_x, const float dir_y)
 
 
 void entity::update(const float& dt)
-
 {
 
 }
 
 void entity::render(sf::RenderTarget* target)
 {
+	/*!
+* Rysuje entity. Jeœli dodana zosta³a tekstura to rysuje teksturê, w przeciwnym razie rysuje defaultShape, czyli domyœlny kszta³t bêd¹cy prostok¹tem.
+	*/
 	if (this->loadTexture && this->sprite)
 	{
 		target->draw(*this->sprite);

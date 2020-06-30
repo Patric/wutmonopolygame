@@ -54,6 +54,9 @@ trapField::~trapField()
 
 void trapField::onStepAction(player* playerOnField)
 {
+	/*!
+* Pobiera od gracza pieni¹dze za wejœcie na pole.
+	*/
 	this->chargePlayer(playerOnField, this->tax);
 	//std::cout << "Player" << playerOnField->playerId << " charged" << "\n";
 }

@@ -2,7 +2,10 @@
 #include "field.h"
 class trapField :
     public field
-{
+	/*!
+* Pole pu³apka. Pobiera pieni¹dze od gracza po wst¹pieniu na nie. Atrybut tax okreœla wielkoœæ kary pieniê¿nej.
+	*/
+{	
 
 private:
 	float tax;

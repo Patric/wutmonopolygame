@@ -18,7 +18,11 @@
 enum font_sizes { BIG_FONT, MEDIUM_FONT, SMALL_FONT };
 
 class entity
+	/*!
+* Klasa abstrakcyjna okreœlaj¹ca ka¿dy element znajduj¹cy siê na planszy, maj¹cy graficzne przedstawienie.
+	*/
 {
+
 
 private:
 	void initVariables();

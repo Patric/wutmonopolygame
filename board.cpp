@@ -6,6 +6,9 @@
 
 void board::initVariables()
 {
+	/*!
+* Inicjalizacja zmiennych i flag.
+	*/
 	this->loadTexture = false; //to change
 	
 	
@@ -14,12 +17,18 @@ void board::initVariables()
 
 void board::initTurns() 
 {
+	/*!
+* Tworzy now¹ turê zwi¹zan¹ z zainicjowanymi graczami oraz polami.
+	*/
+
 	this->cTurn = new turn(155,155,this->players, &this->fields);
 }
 
 void board::initInfoPanel()
 {
-	
+	/*!
+* ITworzy panel informacyjny z lewej strony oraz dodaje do niego informacje..
+	*/
 	this->infoPanel = new gui::infoBar
 	(
 		10.f,
@@ -48,7 +57,9 @@ void board::initInfoPanel()
 
 void board::initComponents()
 {
-
+	/*!
+* Inicjalizuje dodatkowe komponenty takie jak infopanel.
+	*/
 	this->initInfoPanel();
 
 }
@@ -67,6 +78,10 @@ void board::initTextures()
 
 void board::initFields()
 {	
+	/*!
+* Tworzy wszystkie pola na planszy, oblicza ich pozycjê i rozmiar.
+	*/
+
 //calculating fields size
 	this->corner_f_size = this->defaultShape->getGlobalBounds().height / 7;
 	float field_size_x = (this->defaultShape->getSize().x - 2 * corner_f_size) / this->numOfFieldsH;
@@ -286,6 +301,10 @@ void board::initFields()
 
 void board::initTokens()
 {
+	/*!
+* Inicjalizuje tokeny zwi¹zane z graczami.
+	*/
+
 
 	/*this->tokenTest = new token
 	(
@@ -326,6 +345,10 @@ sf::Texture board::loadBTexture(std::string location)
 
 board::board(float x, float y, float width, float height, std::vector<player*>* players, sf::Color boardColor)
 {
+	/*!
+* Inicjalizuje powstanie nowej planszy. Nadaje domyœlne parametry. Inicjalizuje tekstury, zmienne, rozmiary, pozycjê, pola, graczy, tokeny, turê, komponenty.
+	*/
+
 	this->initTextures();
 	this->initVariables();
 	this->createRect(width, height, boardColor, 0);
@@ -354,6 +377,10 @@ board::~board()
 
 void board::render(sf::RenderTarget* target)
 {
+	/*!
+* Rysuje w oknie wszystkie elementy planszy.
+	*/
+
 	this->infoPanel->render(target);
 
 	if (this->loadTexture && this->sprite)
@@ -406,6 +433,10 @@ void board::render(sf::RenderTarget* target)
 
 void board::update(const float& dt, sf::Vector2f mousePos)
 {
+	/*!
+*Aktualizuje wszystkie elementy na planszy.
+	*/
+
 	//this->tokenTest->update(dt);
 	this->cTurn->update(dt, mousePos);
 	

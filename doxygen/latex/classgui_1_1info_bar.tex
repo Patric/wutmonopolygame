@@ -1,0 +1,120 @@
+\hypertarget{classgui_1_1info_bar}{}\section{gui\+:\+:info\+Bar Class Reference}
+\label{classgui_1_1info_bar}\index{gui\+::info\+Bar@{gui\+::info\+Bar}}
+
+
+{\ttfamily \#include $<$gui.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgui_1_1info_bar_a4bd267ecb3d0252502339004dcb56bac}{info\+Bar}} (float x, float y, float width, float height, sf\+::\+Color color, sf\+::\+Font $\ast$font)
+\item 
+virtual \mbox{\hyperlink{classgui_1_1info_bar_afe17d48a3d0a02539f0a1405d0ca07e9}{$\sim$info\+Bar}} ()
+\item 
+void \mbox{\hyperlink{classgui_1_1info_bar_a3141f41fcddf92856bdf55a4d938e6c9}{init\+Positions}} ()
+\item 
+void \mbox{\hyperlink{classgui_1_1info_bar_a64b40fe3d61a9595084410b49f1f31dc}{add\+Info}} (std\+::string position\+\_\+name, std\+::string Text)
+\item 
+void \mbox{\hyperlink{classgui_1_1info_bar_a20a59d50a5f9a854975b7af18890b6b7}{update\+Info}} (std\+::string text, unsigned int index)
+\item 
+void \mbox{\hyperlink{classgui_1_1info_bar_a2b8dd22a47431e03dec9f260f3869828}{render}} (sf\+::\+Render\+Target $\ast$target)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, sf\+::\+Vector2f $>$ \mbox{\hyperlink{classgui_1_1info_bar_ac0adaab0ab1aa2e8108c726ba42316d4}{positions}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa paska informacyjnego. 
+
+Definition at line 79 of file gui.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgui_1_1info_bar_a4bd267ecb3d0252502339004dcb56bac}\label{classgui_1_1info_bar_a4bd267ecb3d0252502339004dcb56bac}} 
+\index{gui\+::info\+Bar@{gui\+::info\+Bar}!info\+Bar@{info\+Bar}}
+\index{info\+Bar@{info\+Bar}!gui\+::info\+Bar@{gui\+::info\+Bar}}
+\subsubsection{\texorpdfstring{info\+Bar()}{infoBar()}}
+{\footnotesize\ttfamily gui\+::info\+Bar\+::info\+Bar (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{sf\+::\+Color}]{color,  }\item[{sf\+::\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+Definition at line 176 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1info_bar_afe17d48a3d0a02539f0a1405d0ca07e9}\label{classgui_1_1info_bar_afe17d48a3d0a02539f0a1405d0ca07e9}} 
+\index{gui\+::info\+Bar@{gui\+::info\+Bar}!````~info\+Bar@{$\sim$info\+Bar}}
+\index{````~info\+Bar@{$\sim$info\+Bar}!gui\+::info\+Bar@{gui\+::info\+Bar}}
+\subsubsection{\texorpdfstring{$\sim$info\+Bar()}{~infoBar()}}
+{\footnotesize\ttfamily gui\+::info\+Bar\+::$\sim$info\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 186 of file gui.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classgui_1_1info_bar_a64b40fe3d61a9595084410b49f1f31dc}\label{classgui_1_1info_bar_a64b40fe3d61a9595084410b49f1f31dc}} 
+\index{gui\+::info\+Bar@{gui\+::info\+Bar}!add\+Info@{add\+Info}}
+\index{add\+Info@{add\+Info}!gui\+::info\+Bar@{gui\+::info\+Bar}}
+\subsubsection{\texorpdfstring{add\+Info()}{addInfo()}}
+{\footnotesize\ttfamily void gui\+::info\+Bar\+::add\+Info (\begin{DoxyParamCaption}\item[{std\+::string}]{position\+\_\+name,  }\item[{std\+::string}]{Text }\end{DoxyParamCaption})}
+
+~\newline
+Dodaje now¹ informacjê do przycisku do nastêpnego wolnego slotu na danej pozycji.
+
+Definition at line 223 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1info_bar_a3141f41fcddf92856bdf55a4d938e6c9}\label{classgui_1_1info_bar_a3141f41fcddf92856bdf55a4d938e6c9}} 
+\index{gui\+::info\+Bar@{gui\+::info\+Bar}!init\+Positions@{init\+Positions}}
+\index{init\+Positions@{init\+Positions}!gui\+::info\+Bar@{gui\+::info\+Bar}}
+\subsubsection{\texorpdfstring{init\+Positions()}{initPositions()}}
+{\footnotesize\ttfamily void gui\+::info\+Bar\+::init\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+~\newline
+Inicjalizuje sloty dla informacji. Trzy mo¿liwoœci\+: lewo, œrodek, prawo.
+
+Definition at line 197 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1info_bar_a2b8dd22a47431e03dec9f260f3869828}\label{classgui_1_1info_bar_a2b8dd22a47431e03dec9f260f3869828}} 
+\index{gui\+::info\+Bar@{gui\+::info\+Bar}!render@{render}}
+\index{render@{render}!gui\+::info\+Bar@{gui\+::info\+Bar}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void gui\+::info\+Bar\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line 251 of file gui.\+cpp.
+
+\mbox{\Hypertarget{classgui_1_1info_bar_a20a59d50a5f9a854975b7af18890b6b7}\label{classgui_1_1info_bar_a20a59d50a5f9a854975b7af18890b6b7}} 
+\index{gui\+::info\+Bar@{gui\+::info\+Bar}!update\+Info@{update\+Info}}
+\index{update\+Info@{update\+Info}!gui\+::info\+Bar@{gui\+::info\+Bar}}
+\subsubsection{\texorpdfstring{update\+Info()}{updateInfo()}}
+{\footnotesize\ttfamily void gui\+::info\+Bar\+::update\+Info (\begin{DoxyParamCaption}\item[{std\+::string}]{text,  }\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 244 of file gui.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classgui_1_1info_bar_ac0adaab0ab1aa2e8108c726ba42316d4}\label{classgui_1_1info_bar_ac0adaab0ab1aa2e8108c726ba42316d4}} 
+\index{gui\+::info\+Bar@{gui\+::info\+Bar}!positions@{positions}}
+\index{positions@{positions}!gui\+::info\+Bar@{gui\+::info\+Bar}}
+\subsubsection{\texorpdfstring{positions}{positions}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, sf\+::\+Vector2f$>$ gui\+::info\+Bar\+::positions}
+
+
+
+Definition at line 95 of file gui.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gui_8h}{gui.\+h}}\item 
+\mbox{\hyperlink{gui_8cpp}{gui.\+cpp}}\end{DoxyCompactItemize}

@@ -5,7 +5,10 @@
 
 class gameState :
 	public state
-{
+	/*!
+* Klasa odpowiedzalna za ekran gry, stan gry. Przechowuje informacje dotycz¹ce graczy.
+	*/
+{	
 	
 private:
 	//token* token1;

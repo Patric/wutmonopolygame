@@ -3,7 +3,11 @@
 
 class token :
 	public entity
+	/*!
+* Klasa tokena gracza. Zwi¹zana z graczem. Podklasa entity, która wykorzystujê czêœæ encji zwi¹zan¹ z tekstur¹.
+	*/
 {
+	
 
 private:
 	//Variables

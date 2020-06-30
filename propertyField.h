@@ -4,7 +4,11 @@
 
 class propertyField :
 	public field
+	/*!
+* Pole w³asnoœci mo¿liwej do nabycia. Zawiera definicjê onStepAction wyœwietlaj¹c¹ panel z opcjami dotycz¹cymi pola.
+	*/
 {
+
 private:
 	float price;
 	float mortgage;

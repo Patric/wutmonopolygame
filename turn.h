@@ -7,7 +7,9 @@
 
 class turn :
 	public entity
-	
+	/*!
+* klasa tury. Zawiera listê graczy oraz kolejkê, a tak¿e wskaŸnik na gracza na jego komputerze. Zawiera najwa¿niejsz¹ czêœæ logiki.
+	*/
 {
 private:
 

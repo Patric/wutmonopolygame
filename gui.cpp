@@ -13,6 +13,9 @@ gui::button::button
 	sf::Color pressedColor
 ) : keyTimeMax(1.f), keyTime(keyTimeMax)
 {
+	/*!
+* Tworzy przycisk z zadanych parametrów. Domyœlnie nie jest zablokowany.
+	*/
 
 	this->blocked = false; //default button state
 	this->buttonState = BTN_IDLE; //default button state
@@ -62,7 +65,9 @@ gui::button::~button()
 
 //Accesors
 const bool gui::button::isPressed() const
-{
+{	/*!
+* Sprawdza stan wciœniêcia przycisku.
+	*/
 	if (this->buttonState == BTN_PRESSED)
 		return true;
 	
@@ -71,17 +76,26 @@ const bool gui::button::isPressed() const
 
 void gui::button::blockButton()
 {
+	/*!
+* Blokuje przycisk, zmieniaj¹c flagê blocked na true
+	*/
 	this->blocked = true;
 }
 
 void gui::button::unblockButton()
 {
+	/*!
+* IOdblokowuje przycisk poprzez zmianê flagi blocked na false.
+	*/
 	this->blocked = false;
 
 }
 
 const bool gui::button::getKeyTime()
 {
+	/*!
+* Pobiera aktualny czas przycisku.
+	*/
 
 	if (this->keyTime >= this->keyTimeMax)
 	{
@@ -94,6 +108,9 @@ const bool gui::button::getKeyTime()
 
 void gui::button::updateKeyTime(const float& dt)
 {
+	/*!
+* Aktualizuje czas przycisku. Pozwala na unikniêcie wielokliku przy d³u¿szym przytrzymaniu myszy.
+	*/
 	if (this->keyTime < this->keyTimeMax)
 	{
 		this->keyTime += 10.f * dt;
@@ -104,6 +121,10 @@ void gui::button::updateKeyTime(const float& dt)
 //Methods
 void gui::button::update(const sf::Vector2f mousePos, const float& dt)
 {
+	/*!
+* IAktualizuje stan przycisku. Sprawdza, czy kursor jest nad przyciskiem, czy jest wciœniêty, zablokowany.
+	*/
+
 	/*update the booleans for hover and pressed*/
 
 	//Idle
@@ -175,6 +196,9 @@ gui::infoBar::~infoBar()
 
 void gui::infoBar::initPositions()
 {
+	/*!
+* Inicjalizuje sloty dla informacji. Trzy mo¿liwoœci: lewo, œrodek, prawo.
+	*/
 	this->positions["Left"] = sf::Vector2f
 	(
 		this->shape.getGlobalBounds().left + 0.2 * this->shape.getSize().x,
@@ -198,7 +222,9 @@ void gui::infoBar::initPositions()
 
 void gui::infoBar::addInfo(std::string position_name, std::string text)
 {
-	
+	/*!
+* Dodaje now¹ informacjê do przycisku do nastêpnego wolnego slotu na danej pozycji.
+	*/
 	this->infos.push_back(new sf::Text);
 	this->infos.back()->setString(text);
 	this->infos.back()->setFont(*this->font);
@@ -256,7 +282,9 @@ void gui::infoBar::render(sf::RenderTarget* target)
 
 gui::menu::menu(float x, float y, std::vector<std::string> buttonNames, sf::Font* font)
 {
-
+	/*!
+* Tworzy przyciski z podanego wektora nazw przycisków. Umieszcza je jeden pod drugim.
+	*/
 	for (auto i = 0; i < buttonNames.size(); i++)
 	{
 

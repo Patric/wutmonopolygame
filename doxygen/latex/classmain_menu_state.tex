@@ -1,0 +1,163 @@
+\hypertarget{classmain_menu_state}{}\section{main\+Menu\+State Class Reference}
+\label{classmain_menu_state}\index{main\+Menu\+State@{main\+Menu\+State}}
+
+
+{\ttfamily \#include $<$main\+Menu\+State.\+h$>$}
+
+Inheritance diagram for main\+Menu\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmain_menu_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_menu_state_aea1bcc67a75fb1ee79695e7bce5fff3b}{main\+Menu\+State}} (sf\+::\+Render\+Window $\ast$\mbox{\hyperlink{classstate_a1bd5650a39b718f10a4efd5fb084e8b7}{window}}, std\+::stack$<$ \mbox{\hyperlink{classstate}{state}} $\ast$$>$ $\ast$\mbox{\hyperlink{classstate_af087bc20fa3153ddb682f8a223db682f}{states}})
+\item 
+virtual \mbox{\hyperlink{classmain_menu_state_adc83db1db1d6da9d35041d867d93916f}{$\sim$main\+Menu\+State}} ()
+\item 
+void \mbox{\hyperlink{classmain_menu_state_ab21e2978f82bf421c637cc74730aeca6}{update\+Input}} (const float \&dt)
+\item 
+void \mbox{\hyperlink{classmain_menu_state_aa3c901135c3f82e8fc20a587bb006ccc}{update\+Buttons}} (const float \&dt)
+\item 
+void \mbox{\hyperlink{classmain_menu_state_a24d60c6601ea578292ff8c957fca10dd}{update}} (const float \&dt)
+\item 
+void \mbox{\hyperlink{classmain_menu_state_ae8d65ed1c6552154715a49f24fae6b7f}{render}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\item 
+void \mbox{\hyperlink{classmain_menu_state_aa741f3c5e7aeb3c3c1c1bf8f99de76e3}{render\+Buttons}} (sf\+::\+Render\+Target $\ast$target=nullptr)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmain_menu_state_a714ee680a76399e6b57c18954d045f58}{init\+Buttons}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classgui_1_1button}{gui\+::button}} $\ast$ $>$ \mbox{\hyperlink{classmain_menu_state_af1b67560d8a49f19c111a31a9d91dd41}{buttons}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa stanu menu. 
+
+Definition at line 6 of file main\+Menu\+State.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmain_menu_state_aea1bcc67a75fb1ee79695e7bce5fff3b}\label{classmain_menu_state_aea1bcc67a75fb1ee79695e7bce5fff3b}} 
+\index{main\+Menu\+State@{main\+Menu\+State}!main\+Menu\+State@{main\+Menu\+State}}
+\index{main\+Menu\+State@{main\+Menu\+State}!main\+Menu\+State@{main\+Menu\+State}}
+\subsubsection{\texorpdfstring{main\+Menu\+State()}{mainMenuState()}}
+{\footnotesize\ttfamily main\+Menu\+State\+::main\+Menu\+State (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{window,  }\item[{std\+::stack$<$ \mbox{\hyperlink{classstate}{state}} $\ast$$>$ $\ast$}]{states }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file main\+Menu\+State.\+cpp.
+
+\mbox{\Hypertarget{classmain_menu_state_adc83db1db1d6da9d35041d867d93916f}\label{classmain_menu_state_adc83db1db1d6da9d35041d867d93916f}} 
+\index{main\+Menu\+State@{main\+Menu\+State}!````~main\+Menu\+State@{$\sim$main\+Menu\+State}}
+\index{````~main\+Menu\+State@{$\sim$main\+Menu\+State}!main\+Menu\+State@{main\+Menu\+State}}
+\subsubsection{\texorpdfstring{$\sim$main\+Menu\+State()}{~mainMenuState()}}
+{\footnotesize\ttfamily main\+Menu\+State\+::$\sim$main\+Menu\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 90 of file main\+Menu\+State.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmain_menu_state_a714ee680a76399e6b57c18954d045f58}\label{classmain_menu_state_a714ee680a76399e6b57c18954d045f58}} 
+\index{main\+Menu\+State@{main\+Menu\+State}!init\+Buttons@{init\+Buttons}}
+\index{init\+Buttons@{init\+Buttons}!main\+Menu\+State@{main\+Menu\+State}}
+\subsubsection{\texorpdfstring{init\+Buttons()}{initButtons()}}
+{\footnotesize\ttfamily void main\+Menu\+State\+::init\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file main\+Menu\+State.\+cpp.
+
+\mbox{\Hypertarget{classmain_menu_state_ae8d65ed1c6552154715a49f24fae6b7f}\label{classmain_menu_state_ae8d65ed1c6552154715a49f24fae6b7f}} 
+\index{main\+Menu\+State@{main\+Menu\+State}!render@{render}}
+\index{render@{render}!main\+Menu\+State@{main\+Menu\+State}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void main\+Menu\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classstate_a53ee61fec5b4c802f2bfafec487dfc25}{state}}.
+
+
+
+Definition at line 151 of file main\+Menu\+State.\+cpp.
+
+\mbox{\Hypertarget{classmain_menu_state_aa741f3c5e7aeb3c3c1c1bf8f99de76e3}\label{classmain_menu_state_aa741f3c5e7aeb3c3c1c1bf8f99de76e3}} 
+\index{main\+Menu\+State@{main\+Menu\+State}!render\+Buttons@{render\+Buttons}}
+\index{render\+Buttons@{render\+Buttons}!main\+Menu\+State@{main\+Menu\+State}}
+\subsubsection{\texorpdfstring{render\+Buttons()}{renderButtons()}}
+{\footnotesize\ttfamily void main\+Menu\+State\+::render\+Buttons (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 173 of file main\+Menu\+State.\+cpp.
+
+\mbox{\Hypertarget{classmain_menu_state_a24d60c6601ea578292ff8c957fca10dd}\label{classmain_menu_state_a24d60c6601ea578292ff8c957fca10dd}} 
+\index{main\+Menu\+State@{main\+Menu\+State}!update@{update}}
+\index{update@{update}!main\+Menu\+State@{main\+Menu\+State}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void main\+Menu\+State\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classstate_a02d3d37c25241efd578fdcae98ef1df8}{state}}.
+
+
+
+Definition at line 137 of file main\+Menu\+State.\+cpp.
+
+\mbox{\Hypertarget{classmain_menu_state_aa3c901135c3f82e8fc20a587bb006ccc}\label{classmain_menu_state_aa3c901135c3f82e8fc20a587bb006ccc}} 
+\index{main\+Menu\+State@{main\+Menu\+State}!update\+Buttons@{update\+Buttons}}
+\index{update\+Buttons@{update\+Buttons}!main\+Menu\+State@{main\+Menu\+State}}
+\subsubsection{\texorpdfstring{update\+Buttons()}{updateButtons()}}
+{\footnotesize\ttfamily void main\+Menu\+State\+::update\+Buttons (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file main\+Menu\+State.\+cpp.
+
+\mbox{\Hypertarget{classmain_menu_state_ab21e2978f82bf421c637cc74730aeca6}\label{classmain_menu_state_ab21e2978f82bf421c637cc74730aeca6}} 
+\index{main\+Menu\+State@{main\+Menu\+State}!update\+Input@{update\+Input}}
+\index{update\+Input@{update\+Input}!main\+Menu\+State@{main\+Menu\+State}}
+\subsubsection{\texorpdfstring{update\+Input()}{updateInput()}}
+{\footnotesize\ttfamily void main\+Menu\+State\+::update\+Input (\begin{DoxyParamCaption}\item[{const float \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classstate_a1f124791a5e818794ba0eb1ac25bff99}{state}}.
+
+
+
+Definition at line 104 of file main\+Menu\+State.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmain_menu_state_af1b67560d8a49f19c111a31a9d91dd41}\label{classmain_menu_state_af1b67560d8a49f19c111a31a9d91dd41}} 
+\index{main\+Menu\+State@{main\+Menu\+State}!buttons@{buttons}}
+\index{buttons@{buttons}!main\+Menu\+State@{main\+Menu\+State}}
+\subsubsection{\texorpdfstring{buttons}{buttons}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{classgui_1_1button}{gui\+::button}}$\ast$$>$ main\+Menu\+State\+::buttons\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file main\+Menu\+State.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_menu_state_8h}{main\+Menu\+State.\+h}}\item 
+\mbox{\hyperlink{main_menu_state_8cpp}{main\+Menu\+State.\+cpp}}\end{DoxyCompactItemize}

@@ -5,6 +5,10 @@
 
 
 class game
+	/*!
+* Glowna klasa gry. Zmiana ekranów dzialania na zasadzie maszyny stanow. Klasa zawiera stos wskaznikow na stany. Odswiezanie odbywa sie synchronicznie
+z zadanym okresem czasu.
+	*/
 {
 
 private:

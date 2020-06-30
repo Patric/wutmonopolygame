@@ -5,7 +5,10 @@
 
 class field :
 	public entity
-{
+	/*!
+* Klasa abstrakcyjna pól na planszy. Ka¿de pole ma unikaln¹ definicjê czysto wirtualnej metody onStepAction().
+	*/
+{	
 private:
 	
 

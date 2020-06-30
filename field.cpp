@@ -5,6 +5,9 @@
 
 field::field()
 {
+	/*!
+* Tworzy nowy obiekt pola z czcionk¹ z lokalizacji /fonts. Skaluje czcionkê odpowiedni do rozmiaru planszy. Domyœlnie nie dopuszcza mo¿liwoœci tekstury.
+	*/
 	this->loadTexture = false; //default variable
 	if (!this->font.loadFromFile("fonts/MONOPOLY_INLINE.TTF"));
 	{
@@ -26,6 +29,9 @@ field::~field()
 
 void field::createAndSetTitleBar()
 {
+	/*!
+* Tworzy belkê tytu³u pola.
+	*/
 	this->titleBar = new sf::RectangleShape;
 	this->titleBar->setSize
 	(
@@ -49,7 +55,9 @@ void field::createAndSetTitleBar()
 
 void field::setFieldText(sf::Text* fieldText, float x, float y, int rotation, sf::Font font, int fontSize, sf::Color color, std::string text)
 {	
-
+	/*!
+* Ustawia tekst pola w zale¿noœci od aktualnej rotacji, pozycji.
+	*/
 	fieldText->setString(text);
 	fieldText->setFont(this->font);
 	fieldText->setCharacterSize(fontSize);
@@ -105,12 +113,18 @@ void field::setFieldText(sf::Text* fieldText, float x, float y, int rotation, sf
 
 void field::chargePlayer(player* playerOnField, int sum)
 {
+	/*!
+* Zabiera z portfela gracza zadan¹ sumê.
+	*/
 	playerOnField->wallet = playerOnField->wallet - sum;
 
 }
 
 void field::initTokenSlots()
 {
+	/*!
+* Inicjalizuje sloty dla tokenów na danym polu, aby nie renderowa³y siê w tym samym miejscu.
+	*/
 	//Center
 	float x = this->defaultShape->getGlobalBounds().left + this->defaultShape->getSize().x / 2.f;
 	float y = this->defaultShape->getGlobalBounds().top + this->defaultShape->getSize().x / 2.f; // 2.f + this->titleBar->getSize().y / 2.5;
@@ -160,6 +174,9 @@ void field::update(const float& dt, sf::Vector2f mousePos)
 //Modify later to avoid putting all tokens at one place
 sf::Vector2f field::getTokenSlot()
 {
+	/*!
+* Pozwala na pobranie niezajêtej pozycji slotu.
+	*/
 	if (this->cnt >= 4)
 	{
 		//std::cout << "cnt: " << cnt << "\n";

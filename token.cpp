@@ -17,7 +17,9 @@ void token::initComponents()
 
 //Constructors / Destructors
 token::token(float x, float y, sf::Texture* texture)
-{	
+{		/*!
+* Tworzy token w danym miejscu z dan¹ tekstur¹.
+	*/
 	this->initVariables();
 	this->initComponents();
 

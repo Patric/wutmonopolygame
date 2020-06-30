@@ -148,6 +148,12 @@
 //
 //
 
+ /*!
+
+
+* Opis projektu
+ */
+
 
 //Normal work
 int main()

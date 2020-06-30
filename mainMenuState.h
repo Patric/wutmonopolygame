@@ -5,9 +5,11 @@
 
 class mainMenuState :
 	public state
-
-
+	/*!
+* Klasa stanu menu.
+	*/
 {
+
 private:
 	sf::RectangleShape background;
 	sf::Texture backgroundTexture; //18
