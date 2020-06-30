@@ -4,7 +4,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <sstream>
-
+#include <list>
 
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
@@ -16,7 +16,6 @@ enum button_states{BTN_IDLE = 0, BTN_HOVER, BTN_PRESSED};
 
 namespace gui 
 { //allows to have several button class. Using namespace since it's a samll gui library
-
 
 	class button
 	{
@@ -30,13 +29,14 @@ namespace gui
 
 		sf::RectangleShape shape;
 		sf::Font* font;
-		sf::Text text;
+	
 
 		sf::Color idleColor;
 		sf::Color hoverColor;
 		sf::Color pressedColor;
 
 	public:
+		sf::Text text;
 
 		button(float x, float y, float width, float height, sf::Font* font,
 			std::string text,
@@ -47,6 +47,8 @@ namespace gui
 
 
 		//Accessors
+
+		//Object called by const function cannot be modified
 		const bool isPressed() const;
 		void blockButton();
 		void unblockButton();
@@ -59,10 +61,10 @@ namespace gui
 		void update(sf::Vector2f mousePos, const float& dt);
 		void render(sf::RenderTarget* target);
 
+		
+
 
 	};
-
-
 	
 	class infoBar 
 	{
@@ -92,6 +94,25 @@ namespace gui
 			void render(sf::RenderTarget* target);
 
 
+
+	};
+
+
+	class menu {
+	private:
+		sf::Font* font;
+
+	public:
+		std::list<button*> buttons;
+
+		menu(float x, float y, std::vector<std::string> buttonNames, sf::Font* font);
+		virtual ~menu();
+
+
+		//methods
+
+		void update(sf::Vector2f mousePos, const float& dt);
+		void render(sf::RenderTarget* target);
 
 	};
 }

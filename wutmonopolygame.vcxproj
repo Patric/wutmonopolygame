@@ -171,6 +171,7 @@
     <ClCompile Include="multiplayer_test.cpp" />
     <ClCompile Include="token.cpp" />
     <ClCompile Include="state.cpp" />
+    <ClCompile Include="trapField.cpp" />
     <ClCompile Include="turn.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +186,7 @@
     <ClInclude Include="mainMenuState.h" />
     <ClInclude Include="token.h" />
     <ClInclude Include="state.h" />
+    <ClInclude Include="trapField.h" />
     <ClInclude Include="turn.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -150,6 +150,7 @@ void gui::button::render(sf::RenderTarget* target)
 	target->draw(this->text);
 }
 
+
 //----------------------------------------------------
 gui::infoBar::infoBar(float x, float y, float width, float height, sf::Color color, sf::Font* font)
 {
@@ -221,9 +222,6 @@ void gui::infoBar::updateInfo(std::string text, unsigned int index)
 }
 
 
-
-
-
 void gui::infoBar::render(sf::RenderTarget* target)
 {
 	target->draw(this->shape);
@@ -254,3 +252,59 @@ void gui::infoBar::render(sf::RenderTarget* target)
 
 }
 
+//----------------------------------------------------
+
+gui::menu::menu(float x, float y, std::vector<std::string> buttonNames, sf::Font* font)
+{
+
+	for (auto i = 0; i < buttonNames.size(); i++)
+	{
+
+		float width = 200;
+		float height = 70;
+
+		this->buttons.push_front(new button
+		(
+			x,
+			y,
+			width,
+			height,
+			font,
+			buttonNames[i],
+			sf::Color(70, 70, 70, 200), //idle
+			sf::Color(150, 150, 150, 255), //hover
+			sf::Color(70, 70, 70, 200) //pressed
+		));
+		y += height;
+
+	}
+
+}
+
+gui::menu::~menu()
+{
+
+	for (auto i = 0; !this->buttons.empty(); i++)
+	{
+		delete this->buttons.front();
+		this->buttons.pop_front();
+	}
+
+
+}
+
+void gui::menu::update(sf::Vector2f mousePos, const float& dt)
+{
+	for (auto i : this->buttons)
+	{
+		i->update(mousePos, dt);
+	}
+}
+
+void gui::menu::render(sf::RenderTarget* target)
+{
+	for (auto i : this->buttons)
+	{
+		i->render(target);
+	}
+}

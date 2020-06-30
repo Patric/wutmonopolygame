@@ -18,6 +18,7 @@ protected:
 	sf::Font font;
 	sf::Color color;
 	sf::RectangleShape* titleBar;
+	player* playerOnField;
 	int cnt;
 	
 

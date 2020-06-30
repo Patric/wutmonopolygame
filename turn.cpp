@@ -28,10 +28,6 @@ turn::~turn()
 
 }
 
-
-
-
-
 void turn::passTurn()
 {
 	this->queue.emplace_front(this->queue.back());
@@ -92,10 +88,6 @@ void turn::waitForTurn()
 
 
 }
-
-
-
-
 
 void turn::render(sf::RenderTarget* target)
 {
@@ -269,7 +261,7 @@ void turn::moveToken(token* tokenToMove, int numOfFields)
 			);
 
 			tokenToMove->currentFieldID = 0;
-			std::cout << tokenToMove->currentFieldID << "\n";
+
 
 		}
 		else if ((tokenToMove->currentFieldID + (numOfFields / numOfFields) < 0))
@@ -291,7 +283,7 @@ void turn::moveToken(token* tokenToMove, int numOfFields)
 				this->fields->at(tokenToMove->currentFieldID + (numOfFields / numOfFields))->getTokenSlot().y
 			);
 			tokenToMove->currentFieldID = tokenToMove->currentFieldID + (numOfFields / numOfFields);
-			std::cout << tokenToMove->currentFieldID << "\n";
+			
 		}
 
 	}

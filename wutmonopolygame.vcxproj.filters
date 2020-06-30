@@ -78,6 +78,9 @@
     <ClCompile Include="turn.cpp">
       <Filter>turn</Filter>
     </ClCompile>
+    <ClCompile Include="trapField.cpp">
+      <Filter>entities\fields</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -115,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="turn.h">
       <Filter>turn</Filter>
+    </ClInclude>
+    <ClInclude Include="trapField.h">
+      <Filter>entities\fields</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

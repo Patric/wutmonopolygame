@@ -19,11 +19,14 @@ propertyField::propertyField(
 )
 {
 	//Initiating variables
+	//this->initVariables();
+	this->currentUpgradeLevel = 0;
+	this->numOfUpgrades = 6;
+	this->owner = NULL;
 	this->color = color;
 	this->mortgage = mortgage;
 	this->dLevelPrice = dLevelPrice;
 	this->dIncome = dIncome;
-
 
 	//Creating rectangles and changing defaults
 	this->createRect(width, height, sf::Color(252, 250, 187, 255), 0);
@@ -63,6 +66,8 @@ propertyField::propertyField(
 propertyField::~propertyField()
 {
 	delete this->fieldTitle;
+	if (this->menu)
+		delete(this->menu);
 //	delete this->fieldType;
 	//delete this->fieldType;
 	//delete this->fieldDescription;
@@ -74,29 +79,136 @@ void propertyField::initVariables()
 	this->currentUpgradeLevel = 0;
 	this->numOfUpgrades = 6;
 	this->owner = NULL;
-
+	this->color = color;
+	this->mortgage = mortgage;
+	this->dLevelPrice = dLevelPrice;
+	this->dIncome = dIncome;
 }
 
 //Update
 
-void propertyField::update(const float& dt)
+void propertyField::update(const float& dt, sf::Vector2f mousePos)
 {
+	//if "leave" is clicked charge
+	//delete menu after button is clicked
+	if (this->menu) 
+	{
+		this->updateMenu(dt, mousePos);
+	}
 	
 }
 
+void propertyField::updateMenu(const float& dt, sf::Vector2f mousePos)
+{
+	this->menu->update(mousePos, dt);
+
+	for (auto i: this->menu->buttons) 
+	{
+		if (i->isPressed()) 
+		{
+			//Owner's menu
+			if (i->text.getString() == "Upgrade") 
+			{
+
+			}
+			else if (i->text.getString() == "Sell") 
+			{
+
+			}
+			else if (i->text.getString() == "Mortgage")
+			{
+
+			}
+			//Buyer's menu
+			else if(i->text.getString() == "Buy")
+			{
+				this->buyField(this->playerOnField);
+				i->blockButton();
+				this->onStepAction(this->playerOnField);
+			}
+			else if (i->text.getString() == "Leave")
+			{
+				if (this->playerOnField != this->owner) {
+					this->chargePlayer(this->playerOnField, this->dIncome);
+				}
+
+				delete this->menu;
+				this->menu = nullptr;
+				break;
+
+			}
+			else
+			{
+				
+			}
+
+		}
+		else if (this->playerOnField->playerToken->currentFieldID != this->ID)
+		{
+			delete this->menu;
+			this->menu = nullptr;
+			break;
+		}
+
+	}
+
+
+
+}
 
 void propertyField::onStepAction(player* playerOnField)
 {
 
-	//ask to buy this field or leave
+	this->playerOnField = playerOnField;
 
-	if (playerOnField != this->owner)
+	if (playerOnField == this->owner)
+	{
+		//show owner's menu
+		this->showOwnersMenu();
+	}
+	else if (this->owner == NULL)
+	{
+		//show buyer's menu
+		//ask to buy this field or leave
+		this->showBuyersMenu();
+	}
+	else
 	{
 		this->chargePlayer(playerOnField, dIncome);
-		if(this->owner)
+		if (this->owner)
 			this->owner->wallet = this->owner->wallet + dIncome;
+		//don't show menu
 	}
+
 	//std::cout << "Stepped on field " << this->ID << " !" << "\n";
+
+}
+
+void propertyField::showOwnersMenu() 
+{
+	
+
+	this->menu = new gui::menu(
+		1700,
+		500,
+		std::vector<std::string>{ "Upgrade", "Sell", "Mortgage", "Leave"},
+		&this->font
+	);
+}
+
+
+
+void propertyField::showBuyersMenu()
+{
+
+	this->menu = new gui::menu(
+		1700,
+		500,
+		std::vector<std::string>{ "Buy", "Leave"},
+		&this->font
+	);
+
+
 
 }
 
@@ -108,10 +220,22 @@ void propertyField::buyField(player* newOwner)
 
 
 
+//Render
 
+void propertyField::render(sf::RenderTarget* target)
+{	
+	//Calling base class method
+	this->field::render(target);
+	if (this->menu) 
+	{
+		this->menu->render(target);
+	}
+	
+	
+}
 
 //Render
-//void propertyField::render(sf::RenderTarget* target)
+//
 //{
 //	if (this->loadTexture && this->sprite)
 //	{

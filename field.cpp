@@ -115,7 +115,7 @@ void field::initTokenSlots()
 	float x = this->defaultShape->getGlobalBounds().left + this->defaultShape->getSize().x / 2.f;
 	float y = this->defaultShape->getGlobalBounds().top + this->defaultShape->getSize().x / 2.f; // 2.f + this->titleBar->getSize().y / 2.5;
 	float k = 0.1;
-	std::cout<< x << " " << y << " \n";
+	//std::cout<< x << " " << y << " \n";
 	//Central pos
 	this->tokenSlots[0] = sf::Vector2f(x,y);
 	//Right down
@@ -162,7 +162,7 @@ sf::Vector2f field::getTokenSlot()
 {
 	if (this->cnt >= 4)
 	{
-		std::cout << "cnt: " << cnt << "\n";
+		//std::cout << "cnt: " << cnt << "\n";
 		this->cnt = 0;
 		return this->tokenSlots[this->cnt + 4];
 
@@ -170,7 +170,7 @@ sf::Vector2f field::getTokenSlot()
 	else
 	{
 		this->cnt++;
-		std::cout << "cnt: " << cnt - 1 << "\n";
+		//std::cout << "cnt: " << cnt - 1 << "\n";
 		return this->tokenSlots[this->cnt - 1];
 	}
 

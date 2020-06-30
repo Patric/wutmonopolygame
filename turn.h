@@ -1,6 +1,7 @@
 #pragma once
 #include <list>
 #include "propertyField.h"
+#include "trapField.h"
 #include "gui.h"
 
 
@@ -12,7 +13,7 @@ private:
 
 	std::map<std::string, gui::button*> buttons;
 	std::vector<player*>* players;
-	player* you;
+	
 	bool moveAvailabe;
 
 	std::vector<field*>* fields;
@@ -26,6 +27,7 @@ private:
 	void initDice();
 
 public:
+	player* you;
 	turn(float x, float y, std::vector<player*>* players, std::vector<field*>* fields);
 	virtual ~turn();
 

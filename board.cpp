@@ -40,9 +40,11 @@ void board::initInfoPanel()
 		ss.str(std::string());
 	}
 
+	ss << "Player " << this->cTurn->you->playerId << " moves";
+	this->infoPanel->addInfo("Center", ss.str());
+
 
 }
-
 
 void board::initComponents()
 {
@@ -150,20 +152,16 @@ void board::initFields()
 
 		this->fields.push_back
 		(
-			new propertyField
+			new trapField
 			(
-				"Pole testowe",
+				"Pole pu³apka",
 				"To jest opis tego pola",
 				static_cast<float>(this->defaultShape->getGlobalBounds().left + field_size_y),
 				static_cast<float>(this->defaultShape->getGlobalBounds().top + this->defaultShape->getGlobalBounds().height - corner_f_size - field_size_x - i * field_size_x),
 				field_size_x,
 				field_size_y,
 				90,
-				sf::Color::Magenta,
-				1000.f,
-				3000.f,
-				200.f,
-				//std::map<int, int>* incomePerLevel
+				sf::Color::Red,
 				100.f
 			)
 		);
@@ -280,10 +278,10 @@ void board::initFields()
 	////Rtight column
 	for (auto &it : this->fields)
 	{
-		std::cout << it->ID << "\n";
+		//std::cout << it->ID << "\n";
 		it->initTokenSlots();
 	};
-	std::cout << this->fields.at(3)->ID << "\n";
+	//std::cout << this->fields.at(3)->ID << "\n";
 }
 
 void board::initTokens()
@@ -397,7 +395,7 @@ void board::render(sf::RenderTarget* target)
 
 
 	}
-
+	
 
 	
 
@@ -411,17 +409,6 @@ void board::update(const float& dt, sf::Vector2f mousePos)
 	//this->tokenTest->update(dt);
 	this->cTurn->update(dt, mousePos);
 	
-	//FOR DEBUG
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-		this->cTurn->moveToken(this->players->at(0)->playerToken,1);
-	
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-		this->cTurn->moveToken(this->players->at(0)->playerToken, -1);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-		this->cTurn->moveToken(this->players->at(1)->playerToken, 1);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-		this->cTurn->moveTokenToID(this->players->at(1)->playerToken, 15);
-
 
 	std::stringstream ss;
 	for (auto i = 0; i < this->players->size(); i++)
@@ -431,6 +418,15 @@ void board::update(const float& dt, sf::Vector2f mousePos)
 		this->infoPanel->updateInfo(ss.str(), i);
 		ss.str(std::string());
 	}
+	ss << "Player " << this->cTurn->you->playerId << " moves";
+	this->infoPanel->updateInfo(ss.str(), this->players->size());
+	
+	for (auto i : this->fields)
+	{
+		i->update(dt, mousePos);
+	}
+
+
 
 
 

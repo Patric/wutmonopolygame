@@ -1,6 +1,6 @@
 #pragma once
 #include "field.h"
-
+#include "gui.h"
 
 class propertyField :
 	public field
@@ -16,9 +16,13 @@ private:
 	int dIncome;
 	int currentUpgradeLevel;
 	int dLevelPrice; //delta level price
+	gui::menu* menu;
 
+	
+	void showOwnersMenu();
+	void showBuyersMenu();
+	void updateMenu(const float& dt, sf::Vector2f mousePos);
 public:
-	//player* owner;
 
 	propertyField
 	(
@@ -48,8 +52,8 @@ public:
 
 	//update methods
 
-	void update(const float& dt);
-
+	void update(const float& dt, sf::Vector2f mousePos);
+	void render(sf::RenderTarget* target);
 
 
 	//render methods
