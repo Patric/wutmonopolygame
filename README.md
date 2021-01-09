@@ -9,5 +9,5 @@ Aby projekt uruchomić w Visual studio należy plik z biblioteką SFML o nazwie 
 
 Zmiany w stosunku do ETAP 2
 ---------------------------
-Pokazano polimorfizm w lepszy sposób poprzed dodanie podklasy trapField, która ma inną implementację onStepAction niż propertyField. Mają też inną implementację render
+Pokazano polimorfizm w lepszy sposób poprzez dodanie podklasy trapField, która ma inną implementację onStepAction niż propertyField. Mają też inną implementację render
 z racji różnić w tym jakie elementy wyświetlają. dodano także dokumentację w doxygen.
